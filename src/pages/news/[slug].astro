@@ -1,0 +1,15 @@
+---
+import { getCollection, render } from 'astro:content';
+import '../../styles/global.css';
+export async function getStaticPaths() {
+  const posts = await getCollection('news');
+  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{post.data.title} — Cleopatra XI</title></head>
+<body><header class="site-header"><div class="nav-wrap"><a class="wordmark" href="/">CLEOPATRA <span>XI</span></a><nav class="article-nav"><a href="/#news">← BACK TO NEWS</a></nav></div></header>
+<main class="article-page container"><span class="kicker">{post.data.category} · {post.data.date.toLocaleDateString('en-US',{dateStyle:'long',timeZone:'UTC'})}</span><h1>{post.data.title}</h1><p class="article-summary">{post.data.summary}</p><article class="article-content"><Content /></article><a class="read-more" href="/#news">← ALL NEWS</a></main>
+<footer class="footer"><div class="container legal">Cleopatra XI — An independent Final Fantasy XI fan project.</div></footer></body></html>
