@@ -1,8 +1,7 @@
 ---
 title: "Cleopatra XI Development Update"
-description: "A look at the latest development progress."
-pubDate: 2026-10-08
-author: "Cleopatra XI Team"
+date: 2026-10-08
+summary: "A look at the latest development progress for Cleopatra XI."
 ---
 
 # Cleopatra XI Development Update
