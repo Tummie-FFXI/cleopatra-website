@@ -19,25 +19,29 @@ const formatDate = (date: Date) => date.toLocaleDateString('en-US', { month:'sho
     <a href="/" class="wordmark" aria-label="Cleopatra XI home">CLEOPATRA <span>XI</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
     <nav id="main-nav" class="nav-links" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#news">News</a><a href="#features">Features</a><a href="#getting-started">Getting Started</a><a href="#community">Community</a>
-      <a class="nav-cta" href="#getting-started">PLAY NOW <span aria-hidden="true">↗</span></a>
+      <a href="#home">Home</a><a href="#news">News</a><a href="#features">Features</a><a href="#getting-started">Getting Started</a><a href="#getting-started">Wiki</a><a href="#community">Community</a>
+      <a class="nav-cta" href="#getting-started">DOWNLOAD LAUNCHER <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
 <main>
   <section id="home" class="hero">
-    <div class="hero-backdrop"></div>
+    <div class="hero-backdrop" aria-hidden="true"></div>
     <div class="hero-inner container">
-      <div class="eyebrow"><span class="line"></span> A NEW CHAPTER IN VANA'DIEL <span class="line"></span></div>
+      <div class="eyebrow">A FINAL FANTASY XI PRIVATE SERVER</div>
       <h1>CLEOPATRA <em>XI</em></h1>
-      <p class="hero-lede">The world you remember. An adventure worth rediscovering.</p>
-      <p class="hero-copy">Return to a classic level 75 journey, shaped by thoughtful refinements and new possibilities.</p>
-      <div class="hero-actions"><a class="btn btn-gold" href="#getting-started">BEGIN YOUR ADVENTURE <span>→</span></a><a class="btn btn-outline" href="#features">EXPLORE THE SERVER</a></div>
+      <p class="hero-lede">RELIVE THE ADVENTURE.<br/>FOR A NEW GENERATION.</p>
+      <p class="hero-copy">A classic level 75 journey with custom content, thoughtful refinements, and the spirit of Vana'diel at its heart.</p>
+      <div class="hero-actions"><a class="btn btn-gold" href="#getting-started">DOWNLOAD LAUNCHER <span>↓</span></a><a class="btn btn-outline" href="#features">LEARN MORE <span>→</span></a></div>
     </div>
-    <div class="hero-bottom"><span>THE JOURNEY BEGINS HERE</span><a href="#news">SCROLL TO EXPLORE ↓</a></div>
   </section>
-  <section class="stats" aria-label="Server highlights"><div class="container stats-grid"><div><strong>75</strong><span>LEVEL CAP</span></div><div><strong>22</strong><span>PLAYABLE JOBS</span></div><div><strong>XI</strong><span>CLASSIC ADVENTURE</span></div><div><strong>∞</strong><span>STORIES TO CREATE</span></div></div></section>
-  <section id="news" class="section container"><div class="section-heading"><div><span class="kicker">THE LATEST FROM CLEOPATRA</span><h2>News & <i>Announcements</i></h2></div><span class="section-note">Updates from our development journey</span></div><div class="news-grid">{news.map((post, i)=><a class="news-card" href={`/news/${post.id}/`}><div class={`news-art news-art-${i+1}`}><span class="art-symbol">{i===0?'✦':'⚔'}</span></div><div class="news-body"><div class="meta"><span>{post.data.category}</span><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time></div><h3>{post.data.title}</h3><p>{post.data.summary}</p><span class="read-more">READ ARTICLE →</span></div></a>)}</div></section>
+  <section class="highlights" aria-label="Cleopatra highlights"><div class="container highlights-grid">
+    <div><span class="highlight-icon">⚔</span><div><h3>CUSTOM CONTENT</h3><p>New weapon skills, equipment refinements, and unique gameplay experiences.</p></div></div>
+    <div><span class="highlight-icon">♟</span><div><h3>COMMUNITY</h3><p>Build friendships and share your adventures across Vana'diel.</p></div></div>
+    <div><span class="highlight-icon">⚙</span><div><h3>QUALITY OF LIFE</h3><p>Modern conveniences that preserve the classic FFXI experience.</p></div></div>
+    <div><span class="highlight-icon">✧</span><div><h3>DEDICATED DEVELOPMENT</h3><p>Ongoing improvements and transparent development updates.</p></div></div>
+  </div></section>
+  <section id="news" class="section news-section container"><div class="news-main"><div class="section-heading"><div><span class="kicker">THE LATEST FROM CLEOPATRA</span><h2>Latest <i>News</i></h2></div><a class="section-note" href="#news">DEVELOPMENT UPDATES →</a></div><div class="news-grid">{news.map((post, i)=><a class="news-card" href={`/news/${post.id}/`}><div class={`news-art news-art-${i+1}`}><span class="art-symbol">{i===0?'✦':'⚔'}</span></div><div class="news-body"><div class="meta"><span>{post.data.category}</span><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time></div><h3>{post.data.title}</h3><p>{post.data.summary}</p><span class="read-more">READ ARTICLE →</span></div></a>)}</div></div><aside class="status-panel"><div class="status-title"><h2>SERVER STATUS</h2><span class="status-pending">NOT CONNECTED</span></div><p>Live server status will appear here when the game server's status API is connected.</p><div class="status-row"><span>Level Cap</span><strong>75</strong></div><div class="status-row"><span>Server</span><strong>Cleopatra XI</strong></div><div class="status-row"><span>Player Count</span><strong>—</strong></div><a href="#getting-started">GETTING STARTED →</a></aside></section>
   <section id="features" class="section features-section"><div class="container"><div class="section-heading"><div><span class="kicker">THE CLEOPATRA EXPERIENCE</span><h2>Familiar World. <i>New Possibilities.</i></h2></div></div><div class="features-grid"><article class="feature"><div class="feature-icon">⚔</div><h3>Classic Level 75</h3><p>Experience an adventure centered on the classic level 75 era and its distinctive sense of progression.</p></article><article class="feature"><div class="feature-icon">✧</div><h3>Refined Weapon Skills</h3><p>Discover our ongoing work on weapon skill balance and job-specific combat options.</p></article><article class="feature"><div class="feature-icon">◈</div><h3>Custom Equipment</h3><p>Explore thoughtful adjustments to equipment and progression, including artifact armor.</p></article><article class="feature"><div class="feature-icon">♜</div><h3>Built for Adventurers</h3><p>A dedicated launcher, clear installation guides, and an evolving community experience.</p></article></div></div></section>
   <section id="getting-started" class="section container start-section"><div class="start-panel"><div><span class="kicker">YOUR STORY AWAITS</span><h2>Begin Your <i>Adventure.</i></h2><p>Prepare your Final Fantasy XI installation, configure Windower 4 or Ashita 4, and get ready to explore Cleopatra XI.</p><div class="steps"><span><b>01</b> Install FFXI</span><span><b>02</b> Set up your loader</span><span><b>03</b> Install Cleopatra Launcher</span></div><p class="small-note">Launcher download and full setup guide links will be added when published.</p></div><div class="start-ornament" aria-hidden="true">XI</div></div></section>
   <section id="community" class="community-section"><div class="container community-inner"><span class="kicker">MORE THAN A SERVER</span><h2>Find Your <i>Fellow Adventurers.</i></h2><p>Follow development news, share discoveries, and help shape the future of Cleopatra XI.</p><p class="community-note">Community links coming soon</p></div></section>

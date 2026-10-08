@@ -1,43 +1,21 @@
-# Cleopatra XI website
+# Cleopatra XI — Cinematic Website v2
 
-Modern Astro website for https://cleopatra-xi.com, hosted on Cloudflare Pages.
+Astro website for Cloudflare Pages. Responsive cinematic homepage based on the approved second mockup.
 
-## Local development
+## Deploy
 
-```bash
-npm install
-npm run dev
-```
+Upload **the contents** of this folder to the root of `Tummie-FFXI/cleopatra-website`, replacing matching files. Remove the old root `index.html` if it exists.
 
-## Cloudflare Pages build settings
-
-- Framework preset: **Astro** (or None)
-- Build command: `npm run build`
-- Build output directory: `dist`
-- Root directory: repository root (leave blank)
-- Production branch: `main`
-
-## Publishing news
-
-Create a new Markdown file in `src/content/news/` with frontmatter:
-
-```md
----
-title: Example announcement
-date: 2026-10-08
-category: Announcement
-summary: A short description shown on the homepage.
----
-
-Article body goes here.
-```
-
-Commit to `main` and Cloudflare Pages will rebuild automatically. The homepage displays the 3 newest articles.
+Cloudflare Pages settings: Build command `npm run build`, output directory `dist`, production branch `main`.
 
 ## Artwork
 
-Place a properly licensed, high-resolution FFXI image at `public/images/hero.jpg` for the cinematic hero. The page already includes a gradient fallback, so it works before an image is added.
+`public/images/hero.webp` is a scenic crop of the approved concept mockup, not a real FFXI screenshot. It can later be replaced with licensed/owned gameplay photography or a dedicated hero illustration.
 
-## Important
+## Server status
 
-The launcher download and community links are intentionally placeholders until official destinations are ready. Replace these with verified URLs before launch.
+The status panel intentionally displays no fabricated player counts or uptime. Connect it to an API later.
+
+## News
+
+Edit Markdown files in `src/content/news/`. Required frontmatter fields: `title`, `date`, and `summary`; optional `category`.

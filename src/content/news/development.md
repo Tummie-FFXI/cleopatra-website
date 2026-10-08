@@ -1,15 +1,8 @@
 ---
-title: "Cleopatra XI Development Update"
-date: 2026-10-08
-summary: "A look at the latest development progress for Cleopatra XI."
+title: "Behind the Scenes: Server Development"
+date: 2026-10-07
+category: Development
+summary: "Exploring custom weapon skills, equipment adjustments, and refinements to the level 75 experience."
 ---
 
-# Cleopatra XI Development Update
-
-Development of Cleopatra XI is underway!
-
-We're working on custom weapon skills, equipment
-improvements, and new features while preserving
-the classic Final Fantasy XI experience.
-
-Stay tuned for more announcements.
+Our development work includes reviewing weapon skills, refining equipment, and building tools to support a consistent player experience. Specific changes will be announced as they are finalized.
