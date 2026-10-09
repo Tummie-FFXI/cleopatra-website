@@ -5,8 +5,7 @@
     "status": "modified",
     "icon": "/images/icons/fighters-mask.png",
     "stats": [
-      "DEF:21~27 HP+10~22 DEX+2~5\n",
-      "Accuracy+2~7 Critical Hit Rate +1%"
+      "DEF:21~27 HP+10~22 DEX+2~5\nAccuracy+2~7 Critical Hit Rate +1%"
     ],
     "level": 50,
     "jobs": [
