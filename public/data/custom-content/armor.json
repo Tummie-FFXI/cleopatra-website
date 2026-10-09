@@ -51,5 +51,23 @@
       "All Jobs"
     ],
     "obtained": "Treasures of Aht Urhgan"
+  },
+  {
+    "name": "Rajas Mantle",
+    "category": "armor",
+    "status": "new",
+    "icon": "/images/icons/rajas-mantle.png",
+    "stats": [
+      "DEF: 3",
+      "Attack +3~10",
+      "Ranged Attack +3~10",
+      "Critical Hit Rate +2%",
+      "Set: Enhances weapon skill damage"
+    ],
+    "level": 30,
+    "jobs": [
+      "All Jobs"
+    ],
+    "obtained": "Wings of the Goddess"
   }
 ]
