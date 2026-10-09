@@ -165,8 +165,16 @@ const items = [
           All
         </button>
 
+        <button data-category="artifact">
+          AF Armor
+        </button>
+        
+        <button data-category="relic">
+          Relic Armor
+        </button>
+        
         <button data-category="armor">
-          Armor
+          Other Armor
         </button>
 
         <button data-category="weapons">
@@ -556,8 +564,12 @@ const items = [
 
       const categoryMatch =
         category === 'all' ||
-        row.dataset.category === category ||
-        row.dataset.subcategory === category;
+        (category === 'armor' &&
+          row.dataset.category === 'armor' &&
+          !['artifact', 'relic'].includes(row.dataset.subcategory || '')) ||
+        (category !== 'armor' &&
+          (row.dataset.category === category ||
+           row.dataset.subcategory === category));
 
 
       const statusMatch =
