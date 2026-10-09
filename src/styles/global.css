@@ -666,4 +666,7 @@
 .db-table:has(#weaponskill-header:not([hidden])) th, .db-table:has(#weaponskill-header:not([hidden])) td { box-sizing: border-box; }
 .db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) .db-badge { display: inline-flex; width: 85px; min-width: 0; max-width: 100%; justify-content: center; align-items: center; box-sizing: border-box; }
 
+.db-table #standard-header[hidden], .db-table #weaponskill-header[hidden] { display: none !important; }
+.db-table:has(#weaponskill-header:not([hidden])) { width: 100%; table-layout: fixed; }
+
 
