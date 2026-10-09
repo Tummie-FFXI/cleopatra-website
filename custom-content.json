@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Fighter's Calligae",
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/items/fighters-calligae.png",
+    "stats": ["DEF: 14", "HP +12", "AGI +3"],
+    "level": 50,
+    "jobs": ["WAR"],
+    "obtained": "Artifact Quest"
+  },
+  {
+    "name": "Fighter's Lorica",
+    "category": "armor",
+    "status": "modified",
+    "stats": ["DEF: 50", "STR +5", "VIT +5", "Attack +10"],
+    "level": 50,
+    "jobs": ["WAR"],
+    "obtained": "Artifact Quest"
+  },
+  {
+    "name": "Voucher: Trust Red Mage",
+    "category": "feritory",
+    "subcategory": "consumables",
+    "status": "new",
+    "effect": "Permanently unlocks RDM support job for Trusts.",
+    "obtained": "Feritory Exchange",
+    "aura": 6,
+    "infamy": 7500
+  },
+  {
+    "name": "Feritory Beacon",
+    "category": "feritory",
+    "subcategory": "consumables",
+    "status": "new",
+    "effect": "Temporary remote access to the Feritory Exchange while adventuring.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Cleopatra's Dagger",
+    "category": "weapons",
+    "status": "new",
+    "stats": ["DMG: 32", "Delay: 190", "DEX +5"],
+    "level": 65,
+    "jobs": ["THF", "DNC"],
+    "obtained": "Cleopatra Original"
+  }
+]

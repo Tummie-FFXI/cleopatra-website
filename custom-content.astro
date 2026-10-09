@@ -1,0 +1,98 @@
+---
+import '../styles/global.css';
+import items from '../data/custom-content.json';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d121c" />
+  <meta name="description" content="Browse Cleopatra XI custom and modified equipment, items, Feritory rewards, and weapon skills." />
+  <title>Custom Content Database — Cleopatra XI</title>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="/" class="wordmark" aria-label="Cleopatra XI home"><img src="/images/cleopatra-logo.png" alt="Cleopatra XI" class="nav-logo" /></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+    <nav id="main-nav" class="nav-links" aria-label="Main navigation">
+      <a href="/">Home</a><a href="/#news">News</a><a href="/#features">Features</a><a class="active" href="/custom-content/">Custom Content</a><a href="/#getting-started">Getting Started</a><a href="/#community">Community</a>
+      <a class="nav-cta" href="/#getting-started">DOWNLOAD LAUNCHER <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main class="custom-db-page">
+  <section class="custom-db-hero">
+    <div class="custom-db-hero-bg" aria-hidden="true"></div>
+    <div class="container custom-db-hero-inner">
+      <span class="custom-db-kicker">CUSTOM CONTENT DATABASE</span>
+      <div class="custom-db-rule"><span>◇</span></div>
+      <h1>Custom Items &amp; Equipment</h1>
+      <p>Discover new creations and reimagined classics exclusive to Cleopatra.</p>
+    </div>
+  </section>
+
+  <section class="custom-db container">
+    <div class="db-controls">
+      <label class="db-search"><span aria-hidden="true">⌕</span><input id="item-search" type="search" placeholder="Search items..." autocomplete="off" /></label>
+      <div class="db-tabs" id="category-tabs" aria-label="Content category">
+        <button class="active" data-category="all">All</button><button data-category="armor">Armor</button><button data-category="weapons">Weapons</button><button data-category="consumables">Consumables</button><button data-category="feritory">Feritory</button><button data-category="weapon-skills">Weapon Skills</button>
+      </div>
+      <div class="db-divider" aria-hidden="true"></div>
+      <div class="db-tabs db-status-tabs" id="status-tabs" aria-label="Content status">
+        <button class="active" data-status="all">All</button><button data-status="new">New</button><button data-status="modified">Modified</button>
+      </div>
+    </div>
+
+    <div class="db-table-wrap">
+      <table class="db-table">
+        <thead><tr><th>Item</th><th>Stats / Effect</th><th>Obtained</th><th>Status</th></tr></thead>
+        <tbody id="item-rows">
+          {items.map((item) => (
+            <tr data-name={item.name.toLowerCase()} data-category={item.category} data-subcategory={item.subcategory || ''} data-status={item.status}>
+              <td data-label="Item">
+                <div class="db-item-name">
+                  {item.icon ? <img src={item.icon} alt="" class="db-item-icon" /> : <span class={`db-item-icon db-icon-placeholder ${item.category}`} aria-hidden="true">{item.category === 'weapons' ? '†' : item.category === 'feritory' ? '✦' : '◆'}</span>}
+                  <strong>{item.name}</strong>
+                </div>
+              </td>
+              <td data-label="Stats / Effect">
+                {item.effect ? <span>{item.effect}</span> : <><div class="db-stat-line">{item.stats?.map((stat) => <span>{stat}</span>)}</div>{item.level && <div class="db-level">Lv. {item.level} &nbsp; {item.jobs?.join(' ')}</div>}</>}
+              </td>
+              <td data-label="Obtained">{item.obtained}</td>
+              <td data-label="Status"><span class={`db-badge ${item.status}`}>{item.status}</span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div id="db-empty" class="db-empty" hidden>No custom content matches those filters.</div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div><div class="wordmark">CLEOPATRA <span>XI</span></div><p>An independent Final Fantasy XI private server project.</p></div><div class="footer-links"><a href="/">Home</a><a href="/#news">News</a><a href="/#features">Features</a><a href="/custom-content/">Custom Content</a></div></div><div class="container legal">Cleopatra XI is an independent fan project and is not affiliated with or endorsed by Square Enix. Final Fantasy XI and related marks belong to their respective owners.</div></footer>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('.nav-links');
+  toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav?.classList.toggle('open', open); });
+
+  const search = document.querySelector<HTMLInputElement>('#item-search');
+  const rows = Array.from(document.querySelectorAll<HTMLTableRowElement>('#item-rows tr'));
+  const empty = document.querySelector<HTMLElement>('#db-empty');
+  let category = 'all'; let status = 'all';
+  const apply = () => {
+    const query = (search?.value || '').trim().toLowerCase(); let shown = 0;
+    rows.forEach(row => {
+      const categoryMatch = category === 'all' || row.dataset.category === category || row.dataset.subcategory === category;
+      const statusMatch = status === 'all' || row.dataset.status === status;
+      const searchMatch = !query || (row.dataset.name || '').includes(query) || row.textContent?.toLowerCase().includes(query);
+      const visible = categoryMatch && statusMatch && searchMatch;
+      row.hidden = !visible; if (visible) shown++;
+    });
+    if (empty) empty.hidden = shown !== 0;
+  };
+  document.querySelectorAll<HTMLButtonElement>('#category-tabs button').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('#category-tabs button').forEach(b=>b.classList.remove('active')); button.classList.add('active'); category = button.dataset.category || 'all'; apply(); }));
+  document.querySelectorAll<HTMLButtonElement>('#status-tabs button').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('#status-tabs button').forEach(b=>b.classList.remove('active')); button.classList.add('active'); status = button.dataset.status || 'all'; apply(); }));
+  search?.addEventListener('input', apply);
+</script>
+</body></html>
