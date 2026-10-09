@@ -54,4 +54,603 @@
 .nav-logo{display:block;width:260px;max-width:100%;height:auto;object-fit:contain;}
 @media(max-width:768px){.nav-logo{width:190px;}}
 
+/* =========================================================
+   CLEOPATRA XI — CUSTOM CONTENT DATABASE
+   ========================================================= */
+
+.custom-db-page {
+  min-height: 100vh;
+  background: #090e14;
+}
+
+
+/* HERO */
+
+.custom-db-hero {
+  position: relative;
+  min-height: 315px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #9b754760;
+}
+
+.custom-db-hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 9, 14, .92) 0%,
+      rgba(7, 12, 18, .78) 45%,
+      rgba(7, 12, 18, .62) 100%
+    ),
+    url('/images/hero.webp') center 42% / cover no-repeat;
+
+  opacity: .68;
+}
+
+.custom-db-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      #090e14 0%,
+      transparent 48%
+    );
+}
+
+.custom-db-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 65px;
+  padding-bottom: 70px;
+}
+
+.custom-db-kicker {
+  color: #cfa565;
+  font-family: Cinzel, serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .24em;
+}
+
+.custom-db-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 150px;
+  margin: 13px 0 17px;
+  color: #c79b59;
+}
+
+.custom-db-rule::before,
+.custom-db-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #a77e45;
+}
+
+.custom-db-rule span {
+  font-size: 10px;
+}
+
+.custom-db-hero h1 {
+  margin: 0;
+
+  font:
+    500 clamp(34px, 4.5vw, 58px) / 1.15
+    Cinzel,
+    serif;
+
+  letter-spacing: .035em;
+  text-transform: uppercase;
+  color: #eee6d9;
+
+  text-shadow:
+    0 3px 18px rgba(0, 0, 0, .8);
+}
+
+.custom-db-hero p {
+  max-width: 650px;
+  margin: 17px 0 0;
+
+  color: #aeb5be;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* DATABASE */
+
+.custom-db {
+  padding-top: 46px;
+  padding-bottom: 100px;
+}
+
+
+/* SEARCH */
+
+.db-controls {
+  margin-bottom: 25px;
+}
+
+.db-search {
+  width: 100%;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 17px;
+
+  background: #0d141d;
+  border: 1px solid #765b3870;
+
+  transition:
+    border-color .2s,
+    background .2s;
+}
+
+.db-search:focus-within {
+  border-color: #c69a5a;
+  background: #101923;
+}
+
+.db-search > span {
+  color: #bc9255;
+  font-size: 20px;
+}
+
+.db-search input {
+  flex: 1;
+
+  background: transparent;
+  border: 0;
+  outline: 0;
+
+  color: #eee7dd;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+}
+
+.db-search input::placeholder {
+  color: #68717d;
+}
+
+
+/* FILTER TABS */
+
+.db-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-top: 18px;
+
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #76572f transparent;
+}
+
+.db-tabs button {
+  flex: 0 0 auto;
+
+  min-height: 36px;
+  padding: 0 17px;
+
+  border: 1px solid transparent;
+  background: transparent;
+
+  color: #8e98a5;
+
+  font-family: Cinzel, serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color .2s,
+    background .2s,
+    border-color .2s;
+}
+
+.db-tabs button:hover {
+  color: #dfbd87;
+  border-color: #7d603c80;
+}
+
+.db-tabs button.active {
+  color: #fff0d7;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a97839,
+      #69441f
+    );
+
+  border-color: #d1a15f;
+
+  box-shadow:
+    inset 0 0 0 1px #120e0955;
+}
+
+.db-divider {
+  height: 1px;
+  margin-top: 16px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #916c3f80,
+      #916c3f20 65%,
+      transparent
+    );
+}
+
+.db-status-tabs {
+  margin-top: 11px;
+}
+
+.db-status-tabs button {
+  min-height: 30px;
+  padding: 0 14px;
+  font-size: 9px;
+}
+
+
+/* TABLE */
+
+.db-table-wrap {
+  border: 1px solid #765b3865;
+  background: #0b121a;
+
+  box-shadow:
+    0 14px 45px rgba(0, 0, 0, .25);
+}
+
+.db-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.db-table thead {
+  background: #111a24;
+}
+
+.db-table th {
+  padding: 15px 18px;
+
+  border-bottom: 1px solid #98734275;
+
+  color: #c79c60;
+
+  font-family: Cinzel, serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.db-table th:nth-child(1) {
+  width: 28%;
+}
+
+.db-table th:nth-child(2) {
+  width: 39%;
+}
+
+.db-table th:nth-child(3) {
+  width: 21%;
+}
+
+.db-table th:nth-child(4) {
+  width: 12%;
+}
+
+.db-table tbody tr {
+  background: #0c131b;
+
+  transition:
+    background .18s,
+    box-shadow .18s;
+}
+
+.db-table tbody tr:nth-child(even) {
+  background: #0e161f;
+}
+
+.db-table tbody tr:hover {
+  background: #121d28;
+
+  box-shadow:
+    inset 3px 0 0 #b88849;
+}
+
+.db-table td {
+  padding: 17px 18px;
+
+  border-bottom: 1px solid #ffffff0c;
+
+  color: #b9c0c9;
+  font-size: 12px;
+  line-height: 1.55;
+  vertical-align: middle;
+}
+
+.db-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* ITEM NAME + FFXI ICON */
+
+.db-item-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.db-item-name strong {
+  color: #e8dfd2;
+
+  font-family: Cinzel, serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.db-item-icon {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+
+  object-fit: contain;
+
+  image-rendering: auto;
+
+  filter:
+    drop-shadow(0 2px 3px rgba(0, 0, 0, .7));
+}
+
+.db-icon-placeholder {
+  display: grid;
+  place-items: center;
+
+  background: #171f29;
+  border: 1px solid #765a37;
+
+  color: #bd9257;
+
+  font-size: 16px;
+}
+
+
+/* STATS */
+
+.db-stat-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 11px;
+
+  color: #d3d5d7;
+}
+
+.db-stat-line span {
+  white-space: nowrap;
+}
+
+.db-level {
+  margin-top: 4px;
+
+  color: #918c84;
+  font-size: 10px;
+}
+
+
+/* STATUS BADGES */
+
+.db-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+  min-height: 25px;
+
+  padding: 0 9px;
+
+  border: 1px solid;
+
+  font-family: Cinzel, serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.db-badge.new {
+  color: #e9c98f;
+  background: #8e63242a;
+  border-color: #ad7b36;
+}
+
+.db-badge.modified {
+  color: #b9c9da;
+  background: #47617a26;
+  border-color: #647d96;
+}
+
+
+/* NO RESULTS */
+
+.db-empty {
+  padding: 55px 25px;
+
+  color: #7f8995;
+  font-family: Cinzel, serif;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-align: center;
+}
+
+
+/* ACTIVE NAV LINK */
+
+.nav-links > a.active:not(.nav-cta) {
+  color: #e1b875;
+}
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+  .db-table th:nth-child(1) {
+    width: 31%;
+  }
+
+  .db-table th:nth-child(2) {
+    width: 37%;
+  }
+
+  .db-table th:nth-child(3) {
+    width: 19%;
+  }
+
+  .db-table th:nth-child(4) {
+    width: 13%;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .custom-db-hero {
+    min-height: 270px;
+  }
+
+  .custom-db-hero-inner {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  .custom-db-hero h1 {
+    font-size: 34px;
+  }
+
+  .custom-db {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  .db-tabs {
+    padding-bottom: 5px;
+  }
+
+  .db-tabs button {
+    padding: 0 13px;
+  }
+
+
+  /* Convert table into item cards */
+
+  .db-table,
+  .db-table tbody,
+  .db-table tr,
+  .db-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .db-table thead {
+    display: none;
+  }
+
+  .db-table tbody tr {
+    padding: 16px;
+
+    border-bottom: 1px solid #80603970;
+  }
+
+  .db-table tbody tr:hover {
+    box-shadow:
+      inset 3px 0 0 #b88849;
+  }
+
+  .db-table td {
+    display: grid;
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 12px;
+
+    padding: 7px 0;
+
+    border: 0;
+  }
+
+  .db-table td::before {
+    content: attr(data-label);
+
+    color: #9e7948;
+
+    font-family: Cinzel, serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  .db-table td:first-child {
+    display: block;
+    padding-bottom: 13px;
+  }
+
+  .db-table td:first-child::before {
+    display: none;
+  }
+
+  .db-item-name strong {
+    font-size: 13px;
+  }
+
+  .db-badge {
+    justify-self: start;
+  }
+
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 420px) {
+
+  .custom-db-hero h1 {
+    font-size: 29px;
+  }
+
+  .custom-db-hero p {
+    font-size: 12px;
+  }
+
+  .db-table td {
+    grid-template-columns: 88px minmax(0, 1fr);
+  }
+
+}
+
 
