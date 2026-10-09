@@ -657,13 +657,13 @@
 .db-table #standard-header[hidden], .db-table #weaponskill-header[hidden] { display: none !important; }
 .db-table:has(#weaponskill-header:not([hidden])) { width: 100%; table-layout: fixed; }
 .db-table:has(#weaponskill-header:not([hidden])) #standard-header th { width: auto; }
-.db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(1) { width: 13%; }
+.db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(1) { width: 10%; }
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(2) { width: 9%; }
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(3) { width: 9%; }
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(4) { width: 10%; }
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(5) { width: 25%; }
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(6) { width: 17%; }
-.db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(7) { width: 17%; }
+.db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(7) { width: 20%; }
 .db-table:has(#weaponskill-header:not([hidden])) th, .db-table:has(#weaponskill-header:not([hidden])) td { box-sizing: border-box; }
 .db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) .db-badge { display:inline-flex; width:85px; min-width:85px; max-width:none; padding:6px 10px; white-space:nowrap; justify-content:center; align-items:center; box-sizing:border-box; }
 
