@@ -313,15 +313,13 @@ const items = [
                       <>
 
                         <div class="db-stat-line">
-
                           {
                             item.stats?.map((stat) => (
-                              <span>
+                              <span class={item.category === 'armor' ? 'db-armor-stat' : ''}>
                                 {stat}
                               </span>
                             ))
                           }
-
                         </div>
 
                         {
