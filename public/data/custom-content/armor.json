@@ -1,18 +1,20 @@
 [
   {
-    "name": "Fighter's Calligae",
+    "name": "Rajas Ring",
     "category": "armor",
     "status": "modified",
-    "icon": "/images/icons/fighters-calligae.png",
+    "icon": "/images/icons/rajas-ring.png",
     "stats": [
-      "DEF: 14",
-      "HP +12",
-      "AGI +3"
+      "STR +2~5",
+      "DEX +2~5",
+      "Store TP +5",
+      "Subtle Blow +5",
+      "Set: Enhances weapon skill damage"
     ],
-    "level": 50,
+    "level": 30,
     "jobs": [
-      "WAR"
+      "All Jobs"
     ],
-    "obtained": "Artifact Armor"
+    "obtained": "Chains of Promathia"
   }
 ]
