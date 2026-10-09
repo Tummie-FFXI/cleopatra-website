@@ -653,4 +653,27 @@
 
 }
 
+/* Custom Content - Weapon Skills status alignment */
+
+.db-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.db-table th:last-child,
+.db-table td:last-child {
+  width: 100px;
+  padding-left: 12px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.db-table td:last-child .db-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  box-sizing: border-box;
+}
+
 
