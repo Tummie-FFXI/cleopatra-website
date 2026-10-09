@@ -58,7 +58,7 @@
     "status": "new",
     "icon": "/images/icons/rajas-mantle.png",
     "stats": [
-      "DEF: 3",
+      "DEF: 3~12",
       "Attack +3~10",
       "Ranged Attack +3~10",
       "Critical Hit Rate +2%",
