@@ -662,5 +662,6 @@
 .db-table:has(#weaponskill-header:not([hidden])) th:nth-child(5) { width: 30%; }
 .db-table:has(#weaponskill-header:not([hidden])) th:nth-child(6) { width: 15%; }
 .db-table:has(#weaponskill-header:not([hidden])) th:nth-child(7) { width: 14%; }
+.db-table:has(#weaponskill-header:not([hidden])) { width: 100%; table-layout: fixed; }
 
 
