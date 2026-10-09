@@ -238,6 +238,8 @@ const items = [
           <tr id="weaponskill-header" hidden>
             <th>Weapon Skill</th>
             <th>Skill</th>
+            <th>Jobs</th>
+            <th>Skill Level</th>
             <th>Description</th>
             <th>Skillchain Properties</th>
             <th>Status</th>
@@ -379,6 +381,8 @@ const items = [
                 </div>
               </td>
               <td data-label="Skill">{item.skill || '—'}</td>
+              <td data-label="Jobs">{Array.isArray(item.jobs) ? item.jobs.join(' ') : (item.jobs || '—')}</td>
+              <td data-label="Skill Level">{item.skillLevel ?? item.skill_level ?? '—'}</td>
               <td data-label="Description">{item.description || item.effect || '—'}</td>
               <td data-label="Skillchain Properties">
                 {Array.isArray(item.skillchain)
@@ -698,21 +702,25 @@ const items = [
   }
 
   .db-table.weaponskill-layout th:nth-child(1),
-  .db-table.weaponskill-layout td:nth-child(1) { width: 25% !important; }
+  .db-table.weaponskill-layout td:nth-child(1) { width: 19% !important; }
   .db-table.weaponskill-layout th:nth-child(2),
-  .db-table.weaponskill-layout td:nth-child(2) { width: 13% !important; }
+  .db-table.weaponskill-layout td:nth-child(2) { width: 9% !important; }
   .db-table.weaponskill-layout th:nth-child(3),
-  .db-table.weaponskill-layout td:nth-child(3) { width: 34% !important; }
+  .db-table.weaponskill-layout td:nth-child(3) { width: 17% !important; }
   .db-table.weaponskill-layout th:nth-child(4),
-  .db-table.weaponskill-layout td:nth-child(4) { width: 18% !important; }
+  .db-table.weaponskill-layout td:nth-child(4) { width: 10% !important; }
   .db-table.weaponskill-layout th:nth-child(5),
-  .db-table.weaponskill-layout td:nth-child(5) { width: 10% !important; }
+  .db-table.weaponskill-layout td:nth-child(5) { width: 25% !important; }
+  .db-table.weaponskill-layout th:nth-child(6),
+  .db-table.weaponskill-layout td:nth-child(6) { width: 13% !important; }
+  .db-table.weaponskill-layout th:nth-child(7),
+  .db-table.weaponskill-layout td:nth-child(7) { width: 7% !important; }
 
   .db-table.weaponskill-layout .db-item-name { min-width: 0; }
   .db-table.weaponskill-layout .db-badge { white-space: nowrap; }
 
   @media (max-width: 700px) {
-    .db-table.weaponskill-layout { min-width: 720px !important; }
+    .db-table.weaponskill-layout { min-width: 980px !important; }
     .db-table-wrap { overflow-x: auto; }
   }
 </style>
