@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Fighter's Calligae",
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/icons/fighters-calligae.png",
+    "stats": [
+      "DEF: 14",
+      "HP +12",
+      "AGI +3"
+    ],
+    "level": 50,
+    "jobs": [
+      "WAR"
+    ],
+    "obtained": "Artifact Armor"
+  }
+]
