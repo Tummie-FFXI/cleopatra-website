@@ -306,7 +306,7 @@ const items = [
                 {
                   (item.category === 'weapon-skills' ? (item.description || item.effect) : item.effect)
                     ?
-                      <span>
+                      <span class={item.category === 'armor' ? 'db-armor-effect' : ''}>
                         {item.category === 'weapon-skills' ? (item.description || item.effect) : item.effect}
                       </span>
                     :
