@@ -3,9 +3,10 @@
     "name": "Coup de Grace",
     "category": "weapon-skills",
     "skill": "Dagger",
-    "description": "Delivers quadruple damage and lowers target's defense.  Effect varies with TP.",
+    "jobs": ["DNC"],
+    "skillLevel": 225,
+    "description": "Delivers quadruple damage and lowers target's defense. Effect varies with TP.",
     "skillchain": ["Fusion"],
-    "status": "new",
-    "icon": "/images/icons/coup-de-grace.png"
+    "status": "new"
   }
 ]
