@@ -34,5 +34,22 @@
       "All Jobs"
     ],
     "obtained": "Chains of Promathia"
+  },
+  {
+    "name": "Rajas Torque",
+    "category": "armor",
+    "status": "new",
+    "icon": "/images/icons/rajas-torque.png",
+    "stats": [
+      "Accuracy +7 Ranged Accuracy +7",
+      "Attack +2~6",
+      "DEX +1~3",
+      "Set: Enhances weapon skill damage"
+    ],
+    "level": 30,
+    "jobs": [
+      "All Jobs"
+    ],
+    "obtained": "Treasures of Aht Urhgan"
   }
 ]
