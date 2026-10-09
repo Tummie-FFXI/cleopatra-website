@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "name": "Parchment of Fellowship",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A parchment inscribed with teachings on the bonds between adventurers and their alter egos. Those who possess it may call forth alter egos capable of employing support jobs.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Warrior's Tome",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A tome detailing the ways of the warrior. Its teachings may be imparted to alter egos, allowing them to employ WAR as a support job.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Ninja's Tome",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A tome detailing the ways of the ninja. Its teachings may be imparted to alter egos, allowing them to employ NIN as a support job.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Samurai's Tome",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A tome detailing the ways of the samurai. Its teachings may be imparted to alter egos, allowing them to employ SAM as a support job.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Red Mage's Tome",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A tome detailing the ways of the red mage. Its teachings may be imparted to alter egos, allowing them to employ RDM as a support job.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Zilart Writ",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A writ bearing the seal of the Feritory. Its bearer is granted access to the Feritory Exchange while traveling the lands of Zilart.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Promathia Writ",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A writ bearing the seal of the Feritory. Its bearer is granted access to the Feritory Exchange while traveling the lands of Promathia.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Aht Urhgan Writ",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A writ bearing the seal of the Feritory. Its bearer is granted access to the Feritory Exchange while traveling the lands of Aht Urhgan.",
+    "obtained": "Feritory Exchange"
+  },
+  {
+    "name": "Goddess Writ",
+    "category": "feritory",
+    "status": "new",
+    "icon": "/images/icons/feretory-parchment.png",
+    "effect": "A writ bearing the seal of the Feritory. Its bearer is granted access to the Feritory Exchange while traveling the lands touched by the Crystal War.",
+    "obtained": "Feritory Exchange"
+  }
+]
