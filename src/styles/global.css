@@ -654,26 +654,13 @@
 }
 
 /* Custom Content - Weapon Skills status alignment */
-
-.db-table {
-  width: 100%;
-  table-layout: fixed;
-}
-
-.db-table th:last-child,
-.db-table td:last-child {
-  width: 100px;
-  padding-left: 12px;
-  padding-right: 24px;
-  box-sizing: border-box;
-}
-
-.db-table td:last-child .db-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 70px;
-  box-sizing: border-box;
-}
+/* Weapon Skills column widths */
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(1) { width: 17%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(2) { width: 9%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(3) { width: 10%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(4) { width: 10%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(5) { width: 30%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(6) { width: 15%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(7) { width: 9%; }
 
 
