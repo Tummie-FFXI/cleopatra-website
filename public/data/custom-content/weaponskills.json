@@ -8,5 +8,15 @@
     "description": "Delivers quadruple damage and lowers target's defense. Effect varies with TP.",
     "skillchain": ["Fusion"],
     "status": "new"
+  },
+  {
+    "name": "Swift Blade",
+    "category": "weapon-skills",
+    "skill": "Sword",
+    "jobs": ["PLD"],
+    "skillLevel": 225,
+    "description": "Delivers a threefold attack. Accuracy and enmity generation are enhanced. Attack bonus varies with TP.",
+    "skillchain": ["Gravitation"],
+    "status": "modified"
   }
 ]
