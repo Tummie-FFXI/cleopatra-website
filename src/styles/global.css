@@ -665,6 +665,6 @@
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(6) { width: 17%; }
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(7) { width: 17%; }
 .db-table:has(#weaponskill-header:not([hidden])) th, .db-table:has(#weaponskill-header:not([hidden])) td { box-sizing: border-box; }
-.db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) .db-badge { display: inline-flex; width: 85px; min-width: 0; max-width: 100%; justify-content: center; align-items: center; box-sizing: border-box; }
+.db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) .db-badge { display: inline-flex; width: 110px; min-width: 0; max-width: 100%; justify-content: center; align-items: center; box-sizing: border-box; }
 
 
