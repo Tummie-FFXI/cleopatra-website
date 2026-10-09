@@ -449,7 +449,7 @@
 }
 
 .db-stat-line span {
-  white-space: nowrap;
+  white-space: pre-line;
 }
 
 .db-level {
@@ -668,8 +668,5 @@
 .db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) .db-badge { display:inline-flex; width:85px; min-width:85px; max-width:none; padding:6px 10px; white-space:nowrap; justify-content:center; align-items:center; box-sizing:border-box; }
 .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(1) { width:15% !important; } .db-table:has(#weaponskill-header:not([hidden])) #weaponskill-header th:nth-child(7) { width:15% !important; }
 
-.db-armor-stat {
-  white-space: pre-line;
-}
 
 
