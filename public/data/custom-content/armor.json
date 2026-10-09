@@ -2,6 +2,7 @@
     {
     "name": "Fighter's Mask",
     "category": "armor",
+    "subcategory": "artifact",
     "status": "modified",
     "icon": "/images/icons/fighters-mask.png",
     "stats": [
