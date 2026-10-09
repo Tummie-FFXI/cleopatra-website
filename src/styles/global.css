@@ -655,8 +655,15 @@
 
 /* Custom Content - Weapon Skills status alignment */
 /* Weapon Skills column widths */
-.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(7), .db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) { width: 130px; min-width: 130px; box-sizing: border-box; }
-.db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) { padding-left: 12px; padding-right: 12px; }
-.db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) .db-badge { display: inline-flex; width: 85px; min-width: 85px; align-items: center; justify-content: center; box-sizing: border-box; }
+.db-table:has(#weaponskill-header:not([hidden])) { width: 100%; table-layout: fixed; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(1) { width: 16%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(2) { width: 9%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(3) { width: 9%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(4) { width: 10%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(5) { width: 25%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(6) { width: 17%; }
+.db-table:has(#weaponskill-header:not([hidden])) th:nth-child(7) { width: 14%; }
+.db-table:has(#weaponskill-header:not([hidden])) th, .db-table:has(#weaponskill-header:not([hidden])) td { box-sizing: border-box; }
+.db-table:has(#weaponskill-header:not([hidden])) td:nth-child(7) .db-badge { display: inline-flex; width: 85px; min-width: 0; max-width: 100%; justify-content: center; align-items: center; box-sizing: border-box; }
 
 
