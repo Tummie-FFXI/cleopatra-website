@@ -15,6 +15,21 @@
     "obtained": "Artifact Quest"
   },
   {
+    "name": "Fighter's Lorica",
+    "category": "armor",
+    "subcategory": "artifact",
+    "status": "modified",
+    "icon": "/images/icons/fighters-lorica.png",
+    "stats": [
+      "DEF:40~55 HP+10~22 STR+3~6 DEX+2~5\nAccuracy+5~11 Attack+5~11\nDouble Attack+1~2%"
+    ],
+    "level": 50,
+    "jobs": [
+      "WAR"
+    ],
+    "obtained": "Artifact Quest"
+  }
+  {
     "name": "Rajas Earring",
     "category": "armor",
     "status": "new",
