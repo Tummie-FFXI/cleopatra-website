@@ -1,4 +1,19 @@
 [
+    {
+    "name": "Fighter's Mask",
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/icons/fighters-mask.png",
+    "stats": [
+      "DEF:21~27 HP+10~22 DEX+2~5",
+      "Accuracy+2~7 Critical Hit Rate +1%"
+    ],
+    "level": 50,
+    "jobs": [
+      "WAR"
+    ],
+    "obtained": "Artifact Quest"
+  },
   {
     "name": "Rajas Earring",
     "category": "armor",
