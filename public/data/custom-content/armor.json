@@ -1,5 +1,23 @@
 [
   {
+    "name": "Rajas Earring",
+    "category": "armor",
+    "status": "new",
+    "icon": "/images/icons/rajas-earring.png",
+    "stats": [
+      "STR +1~2",
+      "Attack +1~3",
+      "Accuracy +1~3",
+      "Haste +1%",
+      "Set: Enhances weapon skill damage"
+    ],
+    "level": 30,
+    "jobs": [
+      "All Jobs"
+    ],
+    "obtained": "Rise of the Zilart"
+  },
+  {
     "name": "Rajas Ring",
     "category": "armor",
     "status": "modified",
