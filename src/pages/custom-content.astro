@@ -226,7 +226,7 @@ const items = [
 
     <div class="db-table-wrap">
 
-      <table class="db-table">
+      <table class="db-table" id="content-table">
 
         <thead>
           <tr id="standard-header">
@@ -375,11 +375,6 @@ const items = [
             >
               <td data-label="Weapon Skill">
                 <div class="db-item-name">
-                  {item.icon ? (
-                    <img src={item.icon} alt="" class="db-item-icon" />
-                  ) : (
-                    <span class="db-item-icon db-icon-placeholder weapon-skills" aria-hidden="true">◆</span>
-                  )}
                   <strong>{item.name}</strong>
                 </div>
               </td>
@@ -528,6 +523,9 @@ const items = [
   let category = 'all';
   let status = 'all';
 
+  const contentTable =
+    document.querySelector<HTMLTableElement>('#content-table');
+
   const standardHeader =
     document.querySelector<HTMLTableRowElement>('#standard-header');
   const weaponskillHeader =
@@ -537,6 +535,7 @@ const items = [
   const applyFilters = () => {
 
     const showWeaponskillLayout = category === 'weapon-skills';
+    contentTable?.classList.toggle('weaponskill-layout', showWeaponskillLayout);
     if (standardHeader) standardHeader.hidden = showWeaponskillLayout;
     if (weaponskillHeader) weaponskillHeader.hidden = !showWeaponskillLayout;
 
@@ -677,6 +676,46 @@ const items = [
   );
 
 </script>
+
+
+<!-- Keep the five weapon-skill columns inside the table container. -->
+<style is:global>
+  .db-table tr[hidden] { display: none !important; }
+
+  .db-table.weaponskill-layout {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+  }
+
+  .db-table.weaponskill-layout th,
+  .db-table.weaponskill-layout td {
+    box-sizing: border-box;
+    min-width: 0 !important;
+    max-width: none;
+    overflow-wrap: anywhere;
+    vertical-align: middle;
+  }
+
+  .db-table.weaponskill-layout th:nth-child(1),
+  .db-table.weaponskill-layout td:nth-child(1) { width: 25% !important; }
+  .db-table.weaponskill-layout th:nth-child(2),
+  .db-table.weaponskill-layout td:nth-child(2) { width: 13% !important; }
+  .db-table.weaponskill-layout th:nth-child(3),
+  .db-table.weaponskill-layout td:nth-child(3) { width: 34% !important; }
+  .db-table.weaponskill-layout th:nth-child(4),
+  .db-table.weaponskill-layout td:nth-child(4) { width: 18% !important; }
+  .db-table.weaponskill-layout th:nth-child(5),
+  .db-table.weaponskill-layout td:nth-child(5) { width: 10% !important; }
+
+  .db-table.weaponskill-layout .db-item-name { min-width: 0; }
+  .db-table.weaponskill-layout .db-badge { white-space: nowrap; }
+
+  @media (max-width: 700px) {
+    .db-table.weaponskill-layout { min-width: 720px !important; }
+    .db-table-wrap { overflow-x: auto; }
+  }
+</style>
 
 </body>
 </html>
