@@ -81,7 +81,7 @@
     "status": "modified",
     "icon": "/images/icons/temple-crown.png",
     "stats": [
-      "DEF:21~26 HP+10~22 DEX+2~5 MND+2~5\nAccuracy+3~8\nEnhances \"Focus\" effect"
+      "DEF:21~26 HP+10~22\nDEX+2~5 MND+2~5\nAccuracy+3~8\nEnhances \"Focus\" effect"
     ],
     "level": 50,
     "jobs": ["MNK"],
@@ -94,7 +94,7 @@
     "status": "modified",
     "icon": "/images/icons/temple-cyclas.png",
     "stats": [
-      "DEF:37~47 HP+12~30 STR+2~6 VIT+2~5\nAccuracy+4~11 Attack+4~13\nEnhances \"Chakra\" effect"
+      "DEF:37~47 HP+12~30\nSTR+2~6 VIT+2~5\nAccuracy+4~11 Attack+4~13\nEnhances \"Chakra\" effect"
     ],
     "level": 50,
     "jobs": ["MNK"],
