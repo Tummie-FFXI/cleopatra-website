@@ -141,6 +141,76 @@
     "obtained": "Artifact Quest"
   },
   {
+    "name": "Healer's Cap",
+    "item_id": 13855,
+    "category": "armor",
+    "subcategory": "artifact",
+    "status": "modified",
+    "icon": "/images/icons/healers-cap.png",
+    "stats": [
+      "DEF:19~25 MP+10~27 MND+2~8\nEnmity-1~3 \"Cure\" potency+1~3%"
+    ],
+    "level": 50,
+    "jobs": ["WHM"],
+    "obtained": "Artifact Quest"
+  },
+  {
+    "name": "Healer's Bliaut",
+    "item_id": 12640,
+    "category": "armor",
+    "subcategory": "artifact",
+    "status": "modified",
+    "icon": "/images/icons/healers-bliaut.png",
+    "stats": [
+      "DEF:36~46 MP+12~30 MND+2~5\nEnfeebling Magic Skill+5~15\nEnmity-2~4 Fast Cast+2~5%"
+    ],
+    "level": 50,
+    "jobs": ["WHM"],
+    "obtained": "Artifact Quest"
+  },
+  {
+    "name": "Healer's Mitts",
+    "item_id": 13963,
+    "category": "armor",
+    "subcategory": "artifact",
+    "status": "modified",
+    "icon": "/images/icons/healers-mitts.png",
+    "stats": [
+      "DEF:12~17 MP+8~22 MND+2~5\nHealing Magic Skill+8~20\nEnmity-2~4 \"Cure\" potency+2~5%"
+    ],
+    "level": 50,
+    "jobs": ["WHM"],
+    "obtained": "Artifact Quest"
+  },
+  {
+    "name": "Healer's Pantaloons",
+    "item_id": 14216,
+    "category": "armor",
+    "subcategory": "artifact",
+    "status": "modified",
+    "icon": "/images/icons/healers-pantaloons.png",
+    "stats": [
+      "DEF:25~34 MP+10~27 VIT+2~5\nDivine Magic Skill+5~20\nEnmity-1~3 \"Cure\" casting time-2~5%"
+    ],
+    "level": 50,
+    "jobs": ["WHM"],
+    "obtained": "Artifact Quest"
+  },
+  {
+    "name": "Healer's Duckbills",
+    "item_id": 14091,
+    "category": "armor",
+    "subcategory": "artifact",
+    "status": "modified",
+    "icon": "/images/icons/healers-duckbills.png",
+    "stats": [
+      "DEF:11~16 MP+8~22 MND+2~5\nEnhancing Magic Skill+3~10\nSpell interruption rate down 10~20%"
+    ],
+    "level": 50,
+    "jobs": ["WHM"],
+    "obtained": "Artifact Quest"
+  },
+  {
     "name": "Rajas Earring",
     "item_id": null,
     "category": "armor",
