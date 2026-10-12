@@ -1,5 +1,5 @@
 /* Cleopatra XI Features page — layered on top of existing global.css */
-.features-hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:86px 20px 70px;background:radial-gradient(ellipse at 50% 20%,rgba(44,65,86,.38),transparent 65%),linear-gradient(115deg,#101b29,#172435 52%,#111b27);border-bottom:1px solid rgba(191,153,90,.35)}
+.features-hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:86px 20px 70px;background-image:linear-gradient(to bottom,rgba(13,18,28,.35) 0%,rgba(13,18,28,.45) 65%,rgba(13,18,28,.85) 100%),url('/images/features-header.png');background-size:cover;background-position:center 48%;background-repeat:no-repeat;border-bottom:1px solid rgba(191,153,90,.35)}
 .features-hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,10,16,.65),transparent 45%,rgba(5,10,16,.5));pointer-events:none}
 .features-hero-inner{max-width:860px;margin-inline:auto}
 .features-hero .kicker,.all-changes .kicker{display:block;color:#c9a66b;letter-spacing:.18em;font-size:.78rem;font-weight:600}
