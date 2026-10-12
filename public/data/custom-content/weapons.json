@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "name": "Blessed Hammer",
+    "item_id": 17422,
+    "category": "weapons",
+    "subcategory": "club",
+    "status": "modified",
+    "icon": "/images/icons/blessed-hammer.png",
+    "stats": [
+      "DMG:33~45 Delay:324\nMP+15~30 MND+3~6\nAccuracy+5~12\n\"Cure\" potency+10~15%"
+    ],
+    "level": 50,
+    "jobs": ["WHM"],
+    "obtained": "Artifact Quest"
+  }
+]
