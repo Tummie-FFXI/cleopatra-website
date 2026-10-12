@@ -1,0 +1,165 @@
+---
+import '../styles/global.css';
+import '../styles/changes.css';
+
+const categories = [
+  {
+    id: 'combat', icon: '⚔', title: 'Combat & Gameplay', subtitle: 'Weapon skills, combat mechanics, and battle systems.',
+    entries: [
+      { title: 'Weapon Skill Refinements', detail: 'Selected existing weapon skills are being adjusted to improve their usefulness and combat variety.', status: 'In Development' },
+      { title: 'New Job-Specific Weapon Skills', detail: 'Select jobs will gain entirely new weapon skills at 225 combat skill.', status: 'Planned' },
+    ],
+  },
+  {
+    id: 'jobs', icon: '♟', title: 'Jobs & Abilities', subtitle: 'Job identities, traits, and abilities.',
+    entries: [
+      { title: 'Geomancer & Rune Fencer', detail: 'Geomancer and Rune Fencer are included as playable jobs in Cleopatra XI.', status: 'Planned' },
+      { title: 'Job Trait Updates', detail: 'New and revised job traits are being designed to reinforce distinctive playstyles.', status: 'In Development' },
+    ],
+  },
+  {
+    id: 'equipment', icon: '◈', title: 'Equipment & Items', subtitle: 'Artifact armor, weapons, and expansion rewards.',
+    entries: [
+      { title: 'Reimagined Artifact Armor', detail: 'Artifact armor can be equipped at level 50, with stats increasing every five levels through level 75.', status: 'In Development' },
+      { title: 'Artifact Weapon Reworks', detail: 'Job artifact weapons are being redesigned to remain useful during progression without surpassing dedicated level 75 endgame equipment.', status: 'In Development' },
+      { title: 'Cross-Expansion Set Bonuses', detail: 'Selected rewards from different expansions can be combined to activate set bonuses. Chains of Promathia rings retain their original stats while contributing to these bonuses.', status: 'Planned' },
+    ],
+  },
+  {
+    id: 'trusts', icon: '♜', title: 'Trusts & Companions', subtitle: 'Smarter allies and new customization options.',
+    entries: [
+      { title: 'Reimagined Trust AI', detail: 'Trusts are being designed with role-aware decisions and more situational combat behavior.', status: 'In Development' },
+      { title: 'Trust Support Jobs', detail: 'Special quests will allow players to unlock one of four support jobs for eligible Trust companions.', status: 'Planned' },
+      { title: 'Role-Aware Positioning', detail: 'Trust behavior will better reflect party roles, including frontline and backline positioning.', status: 'In Development' },
+    ],
+  },
+  {
+    id: 'progression', icon: '✧', title: 'Content & Progression', subtitle: 'Quests, expansion access, and endgame adventures.',
+    entries: [
+      { title: 'Early Access to Sky & Sea', detail: 'Special quests will provide alternative access to these endgame areas before completing their respective expansion storylines.', status: 'Planned' },
+      { title: 'Paragon Endgame', detail: 'A chapter-based endgame progression system, beginning with triggered ground kings and Sky, with additional chapters planned.', status: 'In Development' },
+      { title: 'City Dynamis', detail: 'City Dynamis is planned as part of the initial endgame offering.', status: 'Planned' },
+    ],
+  },
+  {
+    id: 'quality', icon: '⚙', title: 'Quality of Life', subtitle: 'Tools and improvements for a smoother adventure.',
+    entries: [
+      { title: 'Cleopatra Launcher', detail: 'A dedicated launcher supports installation updates and launching configured Windower 4 or Ashita 4 profiles.', status: 'In Development' },
+      { title: 'Flexible Adventuring', detail: 'Cleopatra XI aims to support meaningful progression for solo players and groups alike.', status: 'Design Goal' },
+    ],
+  },
+  {
+    id: 'custom', icon: '✦', title: 'Custom Content', subtitle: 'Original systems and additions created for Cleopatra XI.',
+    entries: [
+      { title: 'Custom Equipment & Rewards', detail: 'New and revised items expand equipment and progression choices across Vana’diel.', status: 'In Development' },
+      { title: 'Future Endgame Chapters', detail: 'Later Paragon chapters are planned around Sea Jailers and Treasures of Aht Urhgan kings.', status: 'Planned' },
+    ],
+  },
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d121c" />
+  <meta name="description" content="Explore the full list of Cleopatra XI gameplay changes, including jobs, artifact armor, Trusts, and endgame content." />
+  <title>Full List of Changes — Cleopatra XI</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="/" class="wordmark" aria-label="Cleopatra XI home"><img src="/images/cleopatra-logo.png" alt="Cleopatra XI" class="nav-logo" /></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+    <nav id="main-nav" class="nav-links" aria-label="Main navigation">
+      <a href="/">Home</a><a href="/#news">News</a><a href="/features/">Features</a><a href="/custom-content/">Custom Content</a><a href="/#getting-started">Getting Started</a><a href="/#getting-started">Wiki</a><a href="/#community">Community</a>
+      <a class="nav-cta" href="/#getting-started">DOWNLOAD LAUNCHER <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="changes-hero">
+    <div class="container changes-hero-inner">
+      <span class="kicker">A REIMAGINED VANA'DIEL</span>
+      <h1>Full List of <em>Changes</em></h1>
+      <p>Explore the refinements and new experiences being developed for Cleopatra XI. Select a category to see what's changing.</p>
+    </div>
+  </section>
+  <section class="container changes-content" aria-label="Game changes">
+    <div class="changes-toolbar">
+      <label class="changes-search-wrap">
+        <span class="sr-only">Search changes</span>
+        <span aria-hidden="true">⌕</span>
+        <input id="changes-search" type="search" placeholder="Search changes, jobs, equipment…" autocomplete="off" />
+      </label>
+      <div class="changes-toolbar-actions">
+        <button id="expand-all" type="button">Expand All</button>
+        <button id="collapse-all" type="button">Collapse All</button>
+      </div>
+    </div>
+    <div id="changes-list" class="changes-list">
+      {categories.map((category, index) => (
+        <details class="changes-category" data-category={category.id} open={index === 0}>
+          <summary>
+            <div class="changes-art" aria-hidden="true"><!-- Add a category image here later, e.g. <img src="/images/changes/combat.jpg" alt="" /> --></div>
+            <span class="changes-category-icon" aria-hidden="true">{category.icon}</span>
+            <span class="changes-category-label"><strong>{category.title}</strong><small>{category.subtitle}</small></span>
+            <span class="changes-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="changes-category-body">
+            <div class="changes-entries">
+              {category.entries.map((entry) => (
+                <article class="changes-entry">
+                  <div class="changes-entry-top"><h3>{entry.title}</h3><span class="changes-status">{entry.status}</span></div>
+                  <p>{entry.detail}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+    <p id="changes-no-results" class="changes-empty" hidden>No changes match your search. Try a different term.</p>
+    <p class="changes-disclaimer">Development roadmap: descriptions and availability may change as features are implemented and tested. Status labels indicate plans or work in progress, not confirmed live availability.</p>
+    <div class="changes-bottom"><a class="btn btn-gold" href="/features/">EXPLORE FEATURES <span aria-hidden="true">→</span></a></div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-inner"><div><div class="wordmark">CLEOPATRA <span>XI</span></div><p>An independent Final Fantasy XI private server project.</p></div><div class="footer-links"><a href="/">Home</a><a href="/#news">News</a><a href="/features/">Features</a><a href="/changes/" aria-current="page">Full List of Changes</a><a href="/#getting-started">Getting Started</a></div></div>
+  <div class="container legal">Cleopatra XI is an independent fan project and is not affiliated with or endorsed by Square Enix. Final Fantasy XI and related marks belong to their respective owners.</div>
+</footer>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('.nav-links');
+  toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav?.classList.toggle('open', open); });
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); toggle?.setAttribute('aria-expanded', 'false'); }));
+
+  const categories = [...document.querySelectorAll<HTMLDetailsElement>('.changes-category')];
+  const search = document.querySelector<HTMLInputElement>('#changes-search');
+  const empty = document.querySelector<HTMLElement>('#changes-no-results');
+  const filter = () => {
+    const query = search?.value.trim().toLowerCase() ?? '';
+    let visible = 0;
+    categories.forEach(category => {
+      const title = category.querySelector('.changes-category-label')?.textContent?.toLowerCase() ?? '';
+      const entries = [...category.querySelectorAll<HTMLElement>('.changes-entry')];
+      const categoryMatches = title.includes(query);
+      let entryCount = 0;
+      entries.forEach(entry => {
+        const match = !query || categoryMatches || (entry.textContent?.toLowerCase().includes(query) ?? false);
+        entry.hidden = !match;
+        if (match) entryCount++;
+      });
+      category.hidden = entryCount === 0;
+      if (entryCount) visible++;
+      if (query && entryCount) category.open = true;
+    });
+    if (empty) empty.hidden = visible !== 0;
+  };
+  search?.addEventListener('input', filter);
+  document.querySelector('#expand-all')?.addEventListener('click', () => categories.filter(c => !c.hidden).forEach(c => c.open = true));
+  document.querySelector('#collapse-all')?.addEventListener('click', () => categories.forEach(c => c.open = false));
+</script>
+</body>
+</html>
