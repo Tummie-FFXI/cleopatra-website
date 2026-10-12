@@ -5,56 +5,91 @@ import '../styles/changes.css';
 const categories = [
   {
     id: 'combat', icon: '⚔', title: 'Combat & Gameplay', subtitle: 'Weapon skills, combat mechanics, and battle systems.',
-    entries: [
-      { title: 'Weapon Skill Refinements', detail: 'Selected existing weapon skills are being adjusted to improve their usefulness and combat variety.', status: 'In Development' },
-      { title: 'New Job-Specific Weapon Skills', detail: 'Select jobs will gain entirely new weapon skills at 225 combat skill.', status: 'Planned' },
-    ],
+    groups: [
+      { title: 'Weapon Skills', items: [
+        'Selected existing weapon skills are being rebalanced.',
+        'Select jobs will receive new job-specific weapon skills at 225 combat skill.'
+      ] }
+    ]
   },
   {
     id: 'jobs', icon: '♟', title: 'Jobs & Abilities', subtitle: 'Job identities, traits, and abilities.',
-    entries: [
-      { title: 'Geomancer & Rune Fencer', detail: 'Geomancer and Rune Fencer are included as playable jobs in Cleopatra XI.', status: 'Planned' },
-      { title: 'Job Trait Updates', detail: 'New and revised job traits are being designed to reinforce distinctive playstyles.', status: 'In Development' },
-    ],
+    groups: [
+      { title: 'Playable Jobs', items: [
+        'Geomancer and Rune Fencer are playable jobs.',
+        'Geomancer and Rune Fencer artifact armor follows the level 50 scaling system.'
+      ] },
+      { title: 'Job Traits', items: [
+        'New and revised job traits are being designed for select jobs.'
+      ] }
+    ]
   },
   {
     id: 'equipment', icon: '◈', title: 'Equipment & Items', subtitle: 'Artifact armor, weapons, and expansion rewards.',
-    entries: [
-      { title: 'Reimagined Artifact Armor', detail: 'Artifact armor can be equipped at level 50, with stats increasing every five levels through level 75.', status: 'In Development' },
-      { title: 'Artifact Weapon Reworks', detail: 'Job artifact weapons are being redesigned to remain useful during progression without surpassing dedicated level 75 endgame equipment.', status: 'In Development' },
-      { title: 'Cross-Expansion Set Bonuses', detail: 'Selected rewards from different expansions can be combined to activate set bonuses. Chains of Promathia rings retain their original stats while contributing to these bonuses.', status: 'Planned' },
-    ],
+    groups: [
+      { title: 'Artifact Armor & Weapons', items: [
+        'All artifact armor pieces become equippable at level 50.',
+        'Artifact armor stats increase every five levels through level 75.',
+        'Artifact weapons are being reworked for level 50–75 progression.'
+      ] },
+      { title: 'Expansion Rewards', items: [
+        'Selected rewards from different expansions can activate cross-expansion set bonuses.',
+        'Chains of Promathia rings retain their original stats and contribute to set bonuses.'
+      ] }
+    ]
   },
   {
     id: 'trusts', icon: '♜', title: 'Trusts & Companions', subtitle: 'Smarter allies and new customization options.',
-    entries: [
-      { title: 'Reimagined Trust AI', detail: 'Trusts are being designed with role-aware decisions and more situational combat behavior.', status: 'In Development' },
-      { title: 'Trust Support Jobs', detail: 'Special quests will allow players to unlock one of four support jobs for eligible Trust companions.', status: 'Planned' },
-      { title: 'Role-Aware Positioning', detail: 'Trust behavior will better reflect party roles, including frontline and backline positioning.', status: 'In Development' },
-    ],
+    groups: [
+      { title: 'Trust AI', items: [
+        'Trust AI is being redesigned for role-aware combat decisions.',
+        'Trust positioning will account for frontline and backline roles.',
+        'Trusts will respond more intelligently to changing battle conditions.'
+      ] },
+      { title: 'Trust Customization', items: [
+        'Special quests will unlock one of four support-job options for eligible Trusts.'
+      ] }
+    ]
   },
   {
     id: 'progression', icon: '✧', title: 'Content & Progression', subtitle: 'Quests, expansion access, and endgame adventures.',
-    entries: [
-      { title: 'Early Access to Sky & Sea', detail: 'Special quests will provide alternative access to these endgame areas before completing their respective expansion storylines.', status: 'Planned' },
-      { title: 'Paragon Endgame', detail: 'A chapter-based endgame progression system, beginning with triggered ground kings and Sky, with additional chapters planned.', status: 'In Development' },
-      { title: 'City Dynamis', detail: 'City Dynamis is planned as part of the initial endgame offering.', status: 'Planned' },
-    ],
+    groups: [
+      { title: 'Expansion Access', items: [
+        'Custom quests will unlock early access to Sky.',
+        'Custom quests will unlock early access to Sea.'
+      ] },
+      { title: 'Initial Endgame', items: [
+        'Paragon Prologue — triggered ground kings.',
+        'Paragon Chapter I — Sky.',
+        'City Dynamis is planned for the initial release.'
+      ] },
+      { title: 'Future Endgame', items: [
+        'Paragon Chapter II — Sea Jailers (future release).',
+        'Paragon Chapter III — Treasures of Aht Urhgan kings (future release).'
+      ] }
+    ]
   },
   {
     id: 'quality', icon: '⚙', title: 'Quality of Life', subtitle: 'Tools and improvements for a smoother adventure.',
-    entries: [
-      { title: 'Cleopatra Launcher', detail: 'A dedicated launcher supports installation updates and launching configured Windower 4 or Ashita 4 profiles.', status: 'In Development' },
-      { title: 'Flexible Adventuring', detail: 'Cleopatra XI aims to support meaningful progression for solo players and groups alike.', status: 'Design Goal' },
-    ],
+    groups: [
+      { title: 'Launcher', items: [
+        'Cleopatra Launcher installs and updates the custom game files.',
+        'Launcher supports saved Windower 4 and Ashita 4 profiles.'
+      ] },
+      { title: 'Adventuring', items: [
+        'Progression is being designed to support solo players and parties of different sizes.'
+      ] }
+    ]
   },
   {
     id: 'custom', icon: '✦', title: 'Custom Content', subtitle: 'Original systems and additions created for Cleopatra XI.',
-    entries: [
-      { title: 'Custom Equipment & Rewards', detail: 'New and revised items expand equipment and progression choices across Vana’diel.', status: 'In Development' },
-      { title: 'Future Endgame Chapters', detail: 'Later Paragon chapters are planned around Sea Jailers and Treasures of Aht Urhgan kings.', status: 'Planned' },
-    ],
-  },
+    groups: [
+      { title: 'Original Additions', items: [
+        'New equipment and rewards will expand character progression options.',
+        'Custom systems and content will be introduced as development continues.'
+      ] }
+    ]
+  }
 ];
 ---
 <!doctype html>
@@ -66,6 +101,48 @@ const categories = [
   <meta name="description" content="Explore the full list of Cleopatra XI gameplay changes, including jobs, artifact armor, Trusts, and endgame content." />
   <title>Full List of Changes — Cleopatra XI</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+<style>
+  /* Compact patch-note lists; overrides the original card layout in changes.css. */
+  .changes-category-body .changes-entries.changes-compact-list {
+    display: block;
+    grid-template-columns: none;
+    padding: 4px 0;
+  }
+  .changes-list-group { padding: 13px 0 12px; }
+  .changes-list-group + .changes-list-group { border-top: 1px solid rgba(177,145,93,.20); }
+  .changes-list-group h3 {
+    margin: 0 0 12px;
+    color: #d8b476;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.06rem;
+    font-weight: 400;
+    letter-spacing: .035em;
+  }
+  .changes-list-group ul { list-style: none; margin: 0; padding: 0; }
+  .changes-list-group li.changes-entry {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 5px 0 5px 23px;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    color: #c9cbd1;
+    font-size: .95rem;
+    line-height: 1.6;
+  }
+  .changes-list-group li.changes-entry::before {
+    content: '◆';
+    position: absolute;
+    top: 7px;
+    left: 1px;
+    color: #c8a069;
+    font-size: .62rem;
+  }
+  .changes-list-group li.changes-entry[hidden] { display: none !important; }
+  .changes-list-group[hidden] { display: none !important; }
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -108,12 +185,16 @@ const categories = [
             <span class="changes-chevron" aria-hidden="true">⌄</span>
           </summary>
           <div class="changes-category-body">
-            <div class="changes-entries">
-              {category.entries.map((entry) => (
-                <article class="changes-entry">
-                  <div class="changes-entry-top"><h3>{entry.title}</h3><span class="changes-status">{entry.status}</span></div>
-                  <p>{entry.detail}</p>
-                </article>
+            <div class="changes-entries changes-compact-list">
+              {category.groups.map((group) => (
+                <section class="changes-list-group">
+                  <h3>{group.title}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li class="changes-entry">{item}</li>
+                    ))}
+                  </ul>
+                </section>
               ))}
             </div>
           </div>
@@ -150,6 +231,9 @@ const categories = [
         const match = !query || categoryMatches || (entry.textContent?.toLowerCase().includes(query) ?? false);
         entry.hidden = !match;
         if (match) entryCount++;
+      });
+      category.querySelectorAll<HTMLElement>('.changes-list-group').forEach(group => {
+        group.hidden = ![...group.querySelectorAll<HTMLElement>('.changes-entry')].some(entry => !entry.hidden);
       });
       category.hidden = entryCount === 0;
       if (entryCount) visible++;
