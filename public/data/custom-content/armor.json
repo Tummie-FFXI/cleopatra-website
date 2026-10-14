@@ -243,7 +243,7 @@
     "status": "modified",
     "icon": "/images/icons/geomancy-mitaines.png",
     "stats": [
-      "DEF:12~20 MP+10~20\nINT+2~4 MND+2~4\nGeomancy skill +5~15\nLuopan: Damage taken -5~12%"
+      "DEF:12~20 MP+10~20\nINT+2~4 MND+2~4\nGeomancy skill +5~15\nHaste+1~2%\nLuopan: Damage taken-5~12%"
     ],
     "level": 50,
     "jobs": ["GEO"],
