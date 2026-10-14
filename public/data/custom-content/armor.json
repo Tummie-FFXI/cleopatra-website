@@ -217,7 +217,7 @@
     "status": "modified",
     "icon": "/images/icons/geomancy-galero.png",
     "stats": [
-      "DEF:15~24 MP+10~25\nINT+2~5 MND+2~5\nElemental magic skill +5~15\nEnhances \"Cardinal Chant\" effect"
+      "DEF:15~24 MP+10~25\nINT+2~5 MND+2~5\n\"Magic Def. Bonus\"+2 Haste+2~5%\nElemental magic skill +5~15\nEnhances \"Cardinal Chant\" effect"
     ],
     "level": 50,
     "jobs": ["GEO"],
