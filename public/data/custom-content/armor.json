@@ -211,6 +211,71 @@
     "obtained": "Artifact Quest"
   },
   {
+    "name": "Geomancy Galero",
+    "item_id": 27786,
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/icons/geomancy-galero.png",
+    "stats": [
+      "DEF:15~24 MP+10~25\nINT+2~5 MND+2~5\nElemental magic skill +3~10\nEnhances \"Cardinal Chant\" effect"
+    ],
+    "level": 50,
+    "jobs": ["GEO"],
+    "obtained": "Geomancer Artifact Armor"
+  },
+  {
+    "name": "Geomancy Tunic",
+    "item_id": 27926,
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/icons/geomancy-tunic.png",
+    "stats": [
+      "DEF:32~45 MP+15~35\nINT+3~6 MND+3~6\nDark magic skill +3~10\n\"Refresh\"+1\nEnhances \"Life Cycle\" effect"
+    ],
+    "level": 50,
+    "jobs": ["GEO"],
+    "obtained": "Geomancer Artifact Armor"
+  },
+  {
+    "name": "Geomancy Mitaines",
+    "item_id": 28066,
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/icons/geomancy-mitaines.png",
+    "stats": [
+      "DEF:12~20 MP+10~20\nINT+2~4 MND+2~4\nGeomancy skill +3~10\nLuopan: Damage taken -3~10%"
+    ],
+    "level": 50,
+    "jobs": ["GEO"],
+    "obtained": "Geomancer Artifact Armor"
+  },
+  {
+    "name": "Geomancy Pants",
+    "item_id": 28206,
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/icons/geomancy-pants.png",
+    "stats": [
+      "DEF:25~35 MP+15~30\nINT+3~5 MND+2~4\n\"Fast Cast\"+2~5%\nSpell interruption rate down 5~15%"
+    ],
+    "level": 50,
+    "jobs": ["GEO"],
+    "obtained": "Geomancer Artifact Armor"
+  },
+  {
+    "name": "Geomancy Sandals",
+    "item_id": 28346,
+    "category": "armor",
+    "status": "modified",
+    "icon": "/images/icons/geomancy-sandals.png",
+    "stats": [
+      "DEF:10~18 MP+8~18\nINT+2~4 MND+2~4\n\"Magic Def. Bonus\"+1~3\nMovement speed +4~12%"
+    ],
+    "level": 50,
+    "jobs": ["GEO"],
+    "obtained": "Geomancer Artifact Armor"
+  },
+  {
     "name": "Rajas Earring",
     "item_id": null,
     "category": "armor",
