@@ -204,7 +204,7 @@
     "status": "modified",
     "icon": "/images/icons/healers-duckbills.png",
     "stats": [
-      "DEF:11~16 MP+8~22 MND+2~5\nEnhancing Magic Skill+3~10\nSpell interruption rate down 10~20%"
+      "DEF:11~16 MP+8~22 MND+2~5\nEnhancing Magic Skill+5~15\nSpell interruption rate down 10~20%"
     ],
     "level": 50,
     "jobs": ["WHM"],
@@ -217,7 +217,7 @@
     "status": "modified",
     "icon": "/images/icons/geomancy-galero.png",
     "stats": [
-      "DEF:15~24 MP+10~25\nINT+2~5 MND+2~5\nElemental magic skill +3~10\nEnhances \"Cardinal Chant\" effect"
+      "DEF:15~24 MP+10~25\nINT+2~5 MND+2~5\nElemental magic skill +5~15\nEnhances \"Cardinal Chant\" effect"
     ],
     "level": 50,
     "jobs": ["GEO"],
@@ -230,7 +230,7 @@
     "status": "modified",
     "icon": "/images/icons/geomancy-tunic.png",
     "stats": [
-      "DEF:32~45 MP+15~35\nINT+3~6 MND+3~6\nDark magic skill +3~10\n\"Refresh\"+1\nEnhances \"Life Cycle\" effect"
+      "DEF:32~45 MP+15~35\nINT+3~6 MND+3~6\nDark magic skill +5~15\n\"Refresh\"+1\nEnhances \"Life Cycle\" effect"
     ],
     "level": 50,
     "jobs": ["GEO"],
@@ -243,7 +243,7 @@
     "status": "modified",
     "icon": "/images/icons/geomancy-mitaines.png",
     "stats": [
-      "DEF:12~20 MP+10~20\nINT+2~4 MND+2~4\nGeomancy skill +3~10\nLuopan: Damage taken -3~10%"
+      "DEF:12~20 MP+10~20\nINT+2~4 MND+2~4\nGeomancy skill +5~15\nLuopan: Damage taken -5~12%"
     ],
     "level": 50,
     "jobs": ["GEO"],
