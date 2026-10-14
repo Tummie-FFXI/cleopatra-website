@@ -256,7 +256,7 @@
     "status": "modified",
     "icon": "/images/icons/geomancy-pants.png",
     "stats": [
-      "DEF:25~35 MP+15~30\nINT+3~5 MND+2~4\n\"Fast Cast\"+2~5%\nSpell interruption rate down 5~15%"
+      "DEF:25~35 MP+15~30\nINT+3~5 MND+2~4\n\"Fast Cast\"+2~5%\nSpell interruption rate down 5~15%\n\"Magic Def. Bonus\"+2 Haste+2~3%"
     ],
     "level": 50,
     "jobs": ["GEO"],
