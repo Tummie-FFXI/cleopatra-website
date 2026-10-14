@@ -230,7 +230,7 @@
     "status": "modified",
     "icon": "/images/icons/geomancy-tunic.png",
     "stats": [
-      "DEF:32~45 MP+15~35\nINT+3~6 MND+3~6\nDark magic skill +5~15\n\"Refresh\"+1\nEnhances \"Life Cycle\" effect"
+      "DEF:32~45 MP+15~35\nINT+3~6 MND+3~6\nDark magic skill +5~15\n\"Magic Def. Bonus\"+2\nHaste+1~2% \"Refresh\"+1\nEnhances \"Life Cycle\" effect"
     ],
     "level": 50,
     "jobs": ["GEO"],
