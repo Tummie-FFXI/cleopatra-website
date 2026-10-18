@@ -1,0 +1,185 @@
+[
+  {
+    "slug": "kupipi",
+    "name": "Kupipi",
+    "job": "White Mage",
+    "jobShort": "WHM",
+    "role": "Healer",
+    "summary": "A dedicated healer whose priorities and positioning adapt to her selected support job.",
+    "portrait": "/images/wiki/trusts/kupipi.png",
+    "subjobs": [
+      "RDM",
+      "WAR",
+      "SAM",
+      "NIN"
+    ],
+    "overview": "Kupipi supports the party with healing, status recovery, and defensive magic. Her custom support job changes healing thresholds, spell options, and frontline positioning.",
+    "behaviors": [
+      {
+        "title": "Emergency Healing",
+        "condition": "A party member falls below the emergency HP threshold for the selected support job.",
+        "action": "Prioritize emergency healing for the most critically injured eligible ally.",
+        "status": "In development"
+      },
+      {
+        "title": "Routine Healing",
+        "condition": "An eligible party member falls below the routine HP threshold.",
+        "action": "Use routine cures; second-highest healing target selection is under development.",
+        "status": "In development"
+      },
+      {
+        "title": "Positioning",
+        "condition": "Support job changes between backline and frontline profiles.",
+        "action": "Stay back as WHM/RDM; move forward as WAR/NIN.",
+        "status": "In development"
+      },
+      {
+        "title": "Utsusemi",
+        "condition": "NIN support job selected.",
+        "action": "Enable Utsusemi spells; exact shadow recast decisions are still being refined.",
+        "status": "In development"
+      },
+      {
+        "title": "Weapon Skills",
+        "condition": "Sufficient TP and a valid combat target.",
+        "action": "Use configured weapon skill selection when supported.",
+        "status": "Planned"
+      }
+    ],
+    "profiles": [
+      {
+        "name": "Default",
+        "routine": 75,
+        "emergency": 25,
+        "position": "Backline",
+        "utsusemi": "No"
+      },
+      {
+        "name": "RDM",
+        "routine": 85,
+        "emergency": 40,
+        "position": "Backline",
+        "utsusemi": "No"
+      },
+      {
+        "name": "WAR",
+        "routine": 40,
+        "emergency": 20,
+        "position": "Frontline",
+        "utsusemi": "No"
+      },
+      {
+        "name": "SAM",
+        "routine": null,
+        "emergency": null,
+        "position": "Not finalized",
+        "utsusemi": "No"
+      },
+      {
+        "name": "NIN",
+        "routine": 45,
+        "emergency": 25,
+        "position": "Frontline",
+        "utsusemi": "Yes"
+      }
+    ],
+    "spells": [
+      "Cure spells",
+      "Status removal",
+      "Protect / Shell",
+      "Utsusemi (NIN profile; in development)"
+    ],
+    "equipment": [
+      "Default Trust equipment \u2014 details to be added"
+    ],
+    "notes": [
+      "Behavior details reflect Cleopatra XI design and testing; availability is not a guarantee of live implementation."
+    ]
+  },
+  {
+    "slug": "ulmia",
+    "name": "Ulmia",
+    "job": "Bard",
+    "jobShort": "BRD",
+    "role": "Support",
+    "summary": "A song-focused companion designed to reposition for melee and mage songs.",
+    "portrait": "/images/wiki/trusts/ulmia.png",
+    "subjobs": [
+      "RDM",
+      "WAR",
+      "SAM",
+      "NIN"
+    ],
+    "overview": "Ulmia is being designed to move toward melee allies to apply frontline songs, then return to the backline for mage songs.",
+    "behaviors": [
+      {
+        "title": "Melee Song Positioning",
+        "condition": "Frontline song buffs are needed.",
+        "action": "Approach melee allies to sing, then return to a safer position.",
+        "status": "Planned"
+      },
+      {
+        "title": "Mage Song Positioning",
+        "condition": "Backline song buffs are needed.",
+        "action": "Return to the backline and apply mage-oriented songs.",
+        "status": "Planned"
+      },
+      {
+        "title": "Song Refresh",
+        "condition": "Two melee songs are active or approaching expiration.",
+        "action": "Evaluate whether to refresh songs; final timing not yet confirmed.",
+        "status": "Planned"
+      }
+    ],
+    "profiles": [],
+    "spells": [
+      "Bard songs \u2014 detailed list to be added"
+    ],
+    "equipment": [
+      "Equipment details to be added"
+    ],
+    "notes": [
+      "Detailed gambit order is not yet finalized."
+    ]
+  },
+  {
+    "slug": "shantotto",
+    "name": "Shantotto",
+    "job": "Black Mage",
+    "jobShort": "BLM",
+    "role": "Magic Damage",
+    "summary": "An offensive caster with planned support-job customization.",
+    "portrait": "/images/wiki/trusts/shantotto.png",
+    "subjobs": [
+      "RDM",
+      "WAR",
+      "SAM",
+      "NIN"
+    ],
+    "overview": "Shantotto is included as an initial Trust Compendium entry. Detailed Cleopatra XI behavior is still being documented.",
+    "behaviors": [
+      {
+        "title": "Offensive Spellcasting",
+        "condition": "Valid hostile target and spell availability.",
+        "action": "Detailed selection rules to be added after verification.",
+        "status": "To document"
+      },
+      {
+        "title": "Support Job Adaptation",
+        "condition": "A custom support job is selected.",
+        "action": "Profile-specific behavior to be documented.",
+        "status": "Planned"
+      }
+    ],
+    "profiles": [],
+    "spells": [
+      "Spell list to be added"
+    ],
+    "equipment": [
+      "Equipment details to be added"
+    ],
+    "notes": [
+      "This profile is a documentation placeholder, not a statement of implemented AI."
+    ]
+  }
+]
