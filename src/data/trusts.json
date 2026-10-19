@@ -1,5 +1,56 @@
 [
   {
+    "slug": "curilla",
+    "name": "Curilla",
+    "job": "Paladin",
+    "jobShort": "PLD",
+    "role": "Tank",
+    "summary": "A dedicated tank whose priorities are holding hate for the party",
+    "portrait": "/images/wiki/trusts/trust_curilla.jpg",
+    "subjobs": [
+      "WAR"
+    ],
+    "overview": "Curilla is a tank designed to hold hate for the party.  By default, she has Warrior set as her support job and it cannot be changed.  Unlike retail, she posesses advanced AI to help her hold hate.",
+    "behaviors": [
+      {
+        "title": "Healing Priorities",
+        "description": "Curilla primarily focuses on healing herself to help gain enmity"
+      },
+      {
+        "title": "Combat Positioning",
+        "description": "Curilla is a front line tank and will run to the engaged enemy"
+      },
+      {
+        "title": "Support Job",
+        "description": "By default, Curilla has Warrior as her subjob which cannot be changed, therefore she is ineligible for the support job quest"
+      }
+    ],
+    "profiles": [
+      {
+        "name": "Default",
+        "routine": 75,
+        "emergency": 25,
+        "position": "Backline",
+        "utsusemi": "No"
+      }
+    ],
+    "spells": [
+      "Cure I-V",
+      "Provoke",
+      "Defender",
+      "Sentinel",
+      "Rampart",
+      "Reprisal",
+      "Flash"
+    ],
+    "equipment": [
+      "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
+    ],
+    "notes": [
+      "Kupipi uses Cleopatra Custom AI v6.1"
+    ]
+  },  
+  {
     "slug": "kupipi",
     "name": "Kupipi",
     "job": "White Mage",
@@ -69,7 +120,7 @@
       "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
     ],
     "notes": [
-      "Kupipi uses Cleopatra Custom AIv6.1"
+      "Kupipi uses Cleopatra Custom AI v6.1"
     ]
   }
 ]
