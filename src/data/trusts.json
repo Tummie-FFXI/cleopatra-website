@@ -12,7 +12,7 @@
       "WAR",
       "NIN"
     ],
-    "overview": "Kupipi supports the party with healing, status recovery, and defensive magic. Her custom support job changes healing thresholds, spell options, and frontline positioning.",
+    "overview": "Kupipi supports the party with healing, status recovery, and defensive magic. Unlike retail, she will not use the highest Cure for standard healing based on her level and is more MP effecient.  Her custom support job changes healing thresholds, spell options, and frontline positioning.",
     "behaviors": [
       {
         "title": "Healing Priorities",
@@ -58,16 +58,18 @@
       }
     ],
     "spells": [
-      "Cure spells",
+      "Cure I-V",
+      "Curaga I-III",
       "Status removal",
-      "Protect / Shell",
-      "Utsusemi (NIN profile; in development)"
+      "Protectra / Shellra",
+      "Haste",
+      "Utsusemi (when subjob is Ninja)"
     ],
     "equipment": [
-      "Default Trust equipment \u2014 details to be added"
+      "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
     ],
     "notes": [
-      "Behavior details reflect Cleopatra XI design and testing; availability is not a guarantee of live implementation."
+      "Kupipi uses Cleopatra Custom AIv6.1"
     ]
   }
 ]
