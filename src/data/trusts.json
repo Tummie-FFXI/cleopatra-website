@@ -6,7 +6,7 @@
     "jobShort": "WHM",
     "role": "Healer",
     "summary": "A dedicated healer whose priorities and positioning adapt to her selected support job.",
-    "portrait": "/public/images/wiki/trusts/trust_kupipi.jpg",
+    "portrait": "/images/wiki/trusts/trust_kupipi.jpg",
     "subjobs": [
       "RDM",
       "WAR",
