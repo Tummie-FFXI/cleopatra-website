@@ -10,7 +10,6 @@
     "subjobs": [
       "RDM",
       "WAR",
-      "SAM",
       "NIN"
     ],
     "overview": "Kupipi supports the party with healing, status recovery, and defensive magic. Her custom support job changes healing thresholds, spell options, and frontline positioning.",
