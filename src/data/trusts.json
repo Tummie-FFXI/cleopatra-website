@@ -50,13 +50,6 @@
         "utsusemi": "No"
       },
       {
-        "name": "SAM",
-        "routine": null,
-        "emergency": null,
-        "position": "Not finalized",
-        "utsusemi": "No"
-      },
-      {
         "name": "NIN",
         "routine": 45,
         "emergency": 25,
