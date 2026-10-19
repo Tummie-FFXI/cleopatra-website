@@ -1,22 +1,490 @@
+
 ---
 import '../../../styles/global.css';
 import '../../../styles/wiki.css';
 import trusts from '../../../data/trusts.json';
-export function getStaticPaths() { return trusts.map(trust => ({ params: { slug: trust.slug }, props: { trust } })); }
+
+export function getStaticPaths() {
+  return trusts.map((trust) => ({
+    params: {
+      slug: trust.slug,
+    },
+    props: {
+      trust,
+    },
+  }));
+}
+
 const { trust } = Astro.props;
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{trust.name} — Cleopatra XI Wiki</title><meta name="description" content={`Learn about ${trust.name}'s support jobs and AI decisions in Cleopatra XI.`}/></head><body>
-<header class="site-header"><div class="nav-wrap"><a href="/" class="wordmark"><img src="/images/cleopatra-logo.png" alt="Cleopatra XI" class="nav-logo"/></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button><nav id="main-nav" class="nav-links"><a href="/">Home</a><a href="/#news">News</a><a href="/features/">Features</a><a href="/custom-content/">Custom Content</a><a href="/#getting-started">Getting Started</a><a href="/wiki/" aria-current="page">Wiki</a><a href="/#community">Community</a><a class="nav-cta" href="/#getting-started">DOWNLOAD LAUNCHER ↗</a></nav></div></header>
-<section class="wiki-banner"><div class="container"><span class="wiki-kicker">CLEOPATRA XI WIKI</span><h1>Trust <em>Compendium</em></h1><p>Understand how your companions fight, support, and adapt.</p></div></section>
-<div class="container wiki-shell"><aside class="wiki-sidebar"><div class="wiki-sidebar-heading">WIKI NAVIGATION</div><a class="wiki-side-link" href="/wiki/">Overview</a><div class="wiki-side-heading">TRUSTS</div><a class="wiki-side-link" href="/wiki/trusts/">Trust Compendium</a>{trusts.map(t=><a class:list={['wiki-side-link','sub',{active:t.slug===trust.slug}]} href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>)}<div class="wiki-side-heading">JOBS</div><span class="wiki-side-link muted">Job Changes · Coming soon</span><span class="wiki-side-link muted">Abilities · Coming soon</span><span class="wiki-side-link muted">Weapon Skills · Coming soon</span><div class="wiki-side-heading">EQUIPMENT</div><span class="wiki-side-link muted">Artifact Armor · Coming soon</span><span class="wiki-side-link muted">Custom Equipment · Coming soon</span><div class="wiki-side-heading">CONTENT</div><span class="wiki-side-link muted">Endgame · Coming soon</span><span class="wiki-side-link muted">Feretory · Coming soon</span><div class="wiki-side-heading">SYSTEMS</div><span class="wiki-side-link muted">Quality of Life · Coming soon</span></aside>
-<main class="wiki-main"><div class="wiki-breadcrumb"><a href="/">Home</a> › <a href="/wiki/">Wiki</a> › <a href="/wiki/trusts/">Trusts</a> › {trust.name}</div>
-<section class="wiki-profile wiki-panel"><div class="wiki-profile-art"><img src={trust.portrait} alt="" onerror="this.style.display='none'"/><span class="wiki-placeholder">ADD {trust.name.toUpperCase()} PORTRAIT</span></div><div class="wiki-profile-content"><span class="wiki-kicker">TRUST PROFILE</span><h2>{trust.name}</h2><p class="wiki-role">{trust.job} · {trust.role}</p><p>{trust.summary}</p><div class="wiki-stat-grid"><div><small>Main Job</small><strong>{trust.jobShort}</strong></div><div><small>Default Role</small><strong>{trust.role}</strong></div><div><small>Support Jobs</small><strong>{trust.subjobs.join(' · ')}</strong></div></div></div></section>
-<nav class="wiki-tabs" aria-label="Profile sections"><a href="#overview">Overview</a><a href="#subjobs">Support Jobs</a><a href="#ai">AI Behavior</a><a href="#spells">Spells & Abilities</a><a href="#equipment">Equipment</a><a href="#notes">Notes</a></nav>
-<section class="wiki-panel wiki-section" id="overview"><h2>◉ Overview</h2><p>{trust.overview}</p></section>
-<section class="wiki-panel wiki-section" id="subjobs"><h2>♟ Support Jobs</h2><p>Choose a support job to review available behavior information. Unlock requirements and exact effects are subject to development.</p><div class="wiki-subjob-grid">{trust.subjobs.map(job=><div class="wiki-subjob"><strong>{job}</strong><span>{job==='RDM'?'Support magic':job==='WAR'?'Frontline support':job==='SAM'?'Combat support':'Shadows & frontline'}</span></div>)}</div>{trust.profiles.length>0&&<div class="wiki-table-wrap"><table class="wiki-table"><thead><tr><th>Profile</th><th>Routine Cure</th><th>Emergency Cure</th><th>Position</th><th>Utsusemi</th></tr></thead><tbody>{trust.profiles.map(p=><tr><td>{p.name}</td><td>{p.routine===null?'TBD':`${p.routine}%`}</td><td>{p.emergency===null?'TBD':`${p.emergency}%`}</td><td>{p.position}</td><td>{p.utsusemi}</td></tr>)}</tbody></table></div>}</section>
-<section class="wiki-panel wiki-section" id="ai"><h2>⚙ AI Behavior</h2><p>Expand each decision to see what triggers it and what the Trust attempts to do. These rules are documented design behavior and may still be in development.</p><div class="wiki-ai-list">{trust.behaviors.map((b,i)=><details class="wiki-ai-decision" open={i===0}><summary><span>{String(i+1).padStart(2,'0')} · {b.title}</span><span class="wiki-chevron">⌄</span></summary><div class="wiki-ai-detail"><div><small>WHEN</small><p>{b.condition}</p></div><div><small>THEN</small><p>{b.action}</p></div><div><small>STATUS</small><p>{b.status}</p></div></div></details>)}</div></section>
-<section class="wiki-panel wiki-section" id="spells"><h2>✦ Spells & Abilities</h2><ul class="wiki-bullets">{trust.spells.map(item=><li>{item}</li>)}</ul></section>
-<section class="wiki-panel wiki-section" id="equipment"><h2>◈ Equipment</h2><ul class="wiki-bullets">{trust.equipment.map(item=><li>{item}</li>)}</ul></section>
-<section class="wiki-panel wiki-section" id="notes"><h2>▤ Additional Notes</h2><ul class="wiki-bullets">{trust.notes.map(item=><li>{item}</li>)}</ul></section>
-<div class="wiki-bottom"><a class="wiki-button" href="/wiki/trusts/">← ALL TRUSTS</a></div>
-</main></div><footer class="footer"><div class="container legal">Cleopatra XI is an independent fan project and is not affiliated with or endorsed by Square Enix.</div></footer><script>const t=document.querySelector<HTMLButtonElement>('.menu-toggle');const n=document.querySelector<HTMLElement>('.nav-links');t?.addEventListener('click',()=>{const o=t.getAttribute('aria-expanded')!=='true';t.setAttribute('aria-expanded',String(o));n?.classList.toggle('open',o)});n?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t?.setAttribute('aria-expanded','false')}));</script></body></html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{trust.name} — Cleopatra XI Wiki</title>
+
+    <meta
+      name="description"
+      content={`Learn about ${trust.name}'s support jobs and AI decisions in Cleopatra XI.`}
+    />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         MAIN SITE HEADER
+    ====================================================== -->
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a href="/" class="wordmark">
+          <img
+            src="/images/cleopatra-logo.png"
+            alt="Cleopatra XI"
+            class="nav-logo"
+          />
+        </a>
+
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        <nav id="main-nav" class="nav-links">
+          <a href="/">Home</a>
+          <a href="/#news">News</a>
+          <a href="/features/">Features</a>
+          <a href="/custom-content/">Custom Content</a>
+          <a href="/#getting-started">Getting Started</a>
+          <a href="/wiki/" aria-current="page">Wiki</a>
+          <a href="/#community">Community</a>
+
+          <a class="nav-cta" href="/#getting-started">
+            DOWNLOAD LAUNCHER ↗
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         WIKI BANNER
+    ====================================================== -->
+    <section class="wiki-banner">
+      <div class="container">
+        <span class="wiki-kicker">CLEOPATRA XI WIKI</span>
+
+        <h1>Trust <em>Compendium</em></h1>
+
+        <p>
+          Understand how your companions fight, support, and adapt.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         WIKI PAGE LAYOUT
+    ====================================================== -->
+    <div class="container wiki-shell">
+
+      <!-- ===============================================
+           WIKI SIDEBAR
+      ================================================ -->
+      <aside class="wiki-sidebar">
+        <div class="wiki-sidebar-heading">
+          WIKI NAVIGATION
+        </div>
+
+        <a class="wiki-side-link" href="/wiki/">
+          Overview
+        </a>
+
+        <!-- TRUSTS -->
+        <div class="wiki-side-heading">TRUSTS</div>
+
+        <a class="wiki-side-link" href="/wiki/trusts/">
+          Trust Compendium
+        </a>
+
+        {
+          trusts.map((t) => (
+            <a
+              class:list={[
+                'wiki-side-link',
+                'sub',
+                { active: t.slug === trust.slug },
+              ]}
+              href={`/wiki/trusts/${t.slug}/`}
+            >
+              {t.name}
+            </a>
+          ))
+        }
+
+        <!-- JOBS -->
+        <div class="wiki-side-heading">JOBS</div>
+
+        <span class="wiki-side-link muted">
+          Job Changes · Coming soon
+        </span>
+
+        <span class="wiki-side-link muted">
+          Abilities · Coming soon
+        </span>
+
+        <span class="wiki-side-link muted">
+          Weapon Skills · Coming soon
+        </span>
+
+        <!-- EQUIPMENT -->
+        <div class="wiki-side-heading">EQUIPMENT</div>
+
+        <span class="wiki-side-link muted">
+          Artifact Armor · Coming soon
+        </span>
+
+        <span class="wiki-side-link muted">
+          Custom Equipment · Coming soon
+        </span>
+
+        <!-- CONTENT -->
+        <div class="wiki-side-heading">CONTENT</div>
+
+        <span class="wiki-side-link muted">
+          Endgame · Coming soon
+        </span>
+
+        <span class="wiki-side-link muted">
+          Feretory · Coming soon
+        </span>
+
+        <!-- SYSTEMS -->
+        <div class="wiki-side-heading">SYSTEMS</div>
+
+        <span class="wiki-side-link muted">
+          Quality of Life · Coming soon
+        </span>
+      </aside>
+
+      <!-- ===============================================
+           MAIN WIKI CONTENT
+      ================================================ -->
+      <main class="wiki-main">
+
+        <!-- BREADCRUMBS -->
+        <div class="wiki-breadcrumb">
+          <a href="/">Home</a>
+          ›
+          <a href="/wiki/">Wiki</a>
+          ›
+          <a href="/wiki/trusts/">Trusts</a>
+          ›
+          {trust.name}
+        </div>
+
+        <!-- ===========================================
+             TRUST PROFILE
+        ============================================ -->
+        <section class="wiki-profile wiki-panel">
+
+          <!-- PORTRAIT -->
+          <div class="wiki-profile-art">
+            <img
+              src={trust.portrait}
+              alt=""
+              onerror="this.style.display='none'"
+            />
+
+            <span class="wiki-placeholder">
+              ADD {trust.name.toUpperCase()} PORTRAIT
+            </span>
+          </div>
+
+          <!-- PROFILE INFORMATION -->
+          <div class="wiki-profile-content">
+            <span class="wiki-kicker">TRUST PROFILE</span>
+
+            <h2>{trust.name}</h2>
+
+            <p class="wiki-role">
+              {trust.job} · {trust.role}
+            </p>
+
+            <p>{trust.summary}</p>
+
+            <!-- PROFILE STATS -->
+            <div class="wiki-stat-grid">
+
+              <div>
+                <small>Main Job</small>
+                <strong>{trust.jobShort}</strong>
+              </div>
+
+              <div>
+                <small>Default Role</small>
+                <strong>{trust.role}</strong>
+              </div>
+
+              <div>
+                <small>Support Jobs</small>
+                <strong>{trust.subjobs.join(' · ')}</strong>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ===========================================
+             SECTION NAVIGATION
+        ============================================ -->
+        <nav class="wiki-tabs" aria-label="Profile sections">
+          <a href="#overview">Overview</a>
+          <a href="#subjobs">Support Jobs</a>
+          <a href="#ai">AI Behavior</a>
+          <a href="#spells">Spells & Abilities</a>
+          <a href="#equipment">Equipment</a>
+          <a href="#notes">Notes</a>
+        </nav>
+
+        <!-- ===========================================
+             OVERVIEW
+        ============================================ -->
+        <section
+          class="wiki-panel wiki-section"
+          id="overview"
+        >
+          <h2>◉ Overview</h2>
+
+          <p>{trust.overview}</p>
+        </section>
+
+        <!-- ===========================================
+             SUPPORT JOBS
+        ============================================ -->
+        <section
+          class="wiki-panel wiki-section"
+          id="subjobs"
+        >
+          <h2>♟ Support Jobs</h2>
+
+          <p>
+            Choose a support job to review available behavior
+            information. Unlock requirements and exact effects
+            are subject to development.
+          </p>
+
+          <!-- SUPPORT JOB CARDS -->
+          <div class="wiki-subjob-grid">
+            {
+              trust.subjobs.map((job) => (
+                <div class="wiki-subjob">
+                  <strong>{job}</strong>
+
+                  <span>
+                    {
+                      job === 'RDM'
+                        ? 'Support magic'
+                        : job === 'WAR'
+                          ? 'Frontline support'
+                          : job === 'SAM'
+                            ? 'Combat support'
+                            : 'Shadows & frontline'
+                    }
+                  </span>
+                </div>
+              ))
+            }
+          </div>
+
+          <!-- SUPPORT JOB BEHAVIOR TABLE -->
+          {
+            trust.profiles.length > 0 && (
+              <div class="wiki-table-wrap">
+                <table class="wiki-table">
+
+                  <thead>
+                    <tr>
+                      <th>Profile</th>
+                      <th>Routine Cure</th>
+                      <th>Emergency Cure</th>
+                      <th>Position</th>
+                      <th>Utsusemi</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {trust.profiles.map((p) => (
+                      <tr>
+                        <td>{p.name}</td>
+
+                        <td>
+                          {p.routine === null
+                            ? 'TBD'
+                            : `${p.routine}%`}
+                        </td>
+
+                        <td>
+                          {p.emergency === null
+                            ? 'TBD'
+                            : `${p.emergency}%`}
+                        </td>
+
+                        <td>{p.position}</td>
+                        <td>{p.utsusemi}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+
+                </table>
+              </div>
+            )
+          }
+        </section>
+
+    
+        <!-- ===========================================
+             AI BEHAVIOR
+        ============================================ -->
+        <section
+          class="wiki-panel wiki-section"
+          id="ai"
+        >
+          <h2>⚙ AI Behavior</h2>
+        
+          <p>
+            Explore how this Trust makes decisions during combat,
+            including healing, positioning, support magic,
+            and offensive actions.
+          </p>
+        
+          <div class="wiki-ai-list">
+            {
+              trust.behaviors.map((behavior, i) => (
+                <details
+                  class="wiki-ai-decision"
+                  open={i === 0}
+                >
+                  <summary>
+                    <span>
+                      {String(i + 1).padStart(2, '0')}
+                      {' · '}
+                      {behavior.title}
+                    </span>
+        
+                    <span class="wiki-chevron">⌄</span>
+                  </summary>
+        
+                  <div class="wiki-ai-detail">
+                    <p>{behavior.description}</p>
+                  </div>
+                </details>
+              ))
+            }
+          </div>
+        </section>
+
+
+        <!-- ===========================================
+             SPELLS & ABILITIES
+        ============================================ -->
+        <section
+          class="wiki-panel wiki-section"
+          id="spells"
+        >
+          <h2>✦ Spells & Abilities</h2>
+
+          <ul class="wiki-bullets">
+            {
+              trust.spells.map((item) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <!-- ===========================================
+             EQUIPMENT
+        ============================================ -->
+        <section
+          class="wiki-panel wiki-section"
+          id="equipment"
+        >
+          <h2>◈ Equipment</h2>
+
+          <ul class="wiki-bullets">
+            {
+              trust.equipment.map((item) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <!-- ===========================================
+             ADDITIONAL NOTES
+        ============================================ -->
+        <section
+          class="wiki-panel wiki-section"
+          id="notes"
+        >
+          <h2>▤ Additional Notes</h2>
+
+          <ul class="wiki-bullets">
+            {
+              trust.notes.map((item) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <!-- RETURN TO TRUST DIRECTORY -->
+        <div class="wiki-bottom">
+          <a class="wiki-button" href="/wiki/trusts/">
+            ← ALL TRUSTS
+          </a>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer">
+      <div class="container legal">
+        Cleopatra XI is an independent fan project and is not
+        affiliated with or endorsed by Square Enix.
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
+    <script>
+      const t =
+        document.querySelector<HTMLButtonElement>('.menu-toggle');
+
+      const n =
+        document.querySelector<HTMLElement>('.nav-links');
+
+      t?.addEventListener('click', () => {
+        const o = t.getAttribute('aria-expanded') !== 'true';
+
+        t.setAttribute('aria-expanded', String(o));
+        n?.classList.toggle('open', o);
+      });
+
+      n?.querySelectorAll('a').forEach((a) =>
+        a.addEventListener('click', () => {
+          n.classList.remove('open');
+          t?.setAttribute('aria-expanded', 'false');
+        })
+      );
+    </script>
+  </body>
+</html>
