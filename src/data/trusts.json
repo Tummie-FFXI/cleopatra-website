@@ -24,7 +24,7 @@
       },
       {
         "title": "Support Job",
-        "description": "By default, Kupipi has a /WHM subjob, but when a specific quest is completed, players can choose between three different subjobs.  When Red Mage is selected as a subjob, Kupipi raises her healing threshold to be a more competent healer.  When Warrior is selected as a subjob, Kupipi will move to the frontline to melee and her AI shifts to a more melee based strategy while healing becomes second nature.  When Ninja is selected, Kupipi gains access to Utsusemi and adopts a more aggressive frontline role."
+        "description": "By default, Kupipi has a White Mage as her subjob, but when a specific quest is completed, players can choose between three different subjobs.\n\nWhen Red Mage - Kupipi raises her healing threshold to be a more competent healer.\n\nWarrior - Kupipi will move to the frontline to melee and her AI shifts to a more melee based strategy while healing becomes second nature.\n\nNinja - Kupipi gains access to Utsusemi and adopts a more aggressive frontline role."
       }
     ],
     "profiles": [
