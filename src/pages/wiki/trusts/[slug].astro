@@ -379,7 +379,17 @@ const { trust } = Astro.props;
                   </summary>
         
                   <div class="wiki-ai-detail">
-                    <p>{behavior.description}</p>
+                    {behavior.description && (
+                      <p>{behavior.description}</p>
+                    )}
+                  
+                    {behavior.list && behavior.list.length > 0 && (
+                      <ul class="wiki-ai-bullets">
+                        {behavior.list.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </details>
               ))
