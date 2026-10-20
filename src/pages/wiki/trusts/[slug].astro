@@ -346,6 +346,7 @@ const { trust } = Astro.props;
         </section>
 
     
+
         <!-- ===========================================
              AI BEHAVIOR
         ============================================ -->
@@ -357,8 +358,8 @@ const { trust } = Astro.props;
         
           <p>
             Explore how this Trust makes decisions during combat,
-            including healing, positioning, support magic,
-            and offensive actions.
+            including positioning, spells, job abilities,
+            and weapon skills.
           </p>
         
           <div class="wiki-ai-list">
@@ -387,24 +388,6 @@ const { trust } = Astro.props;
           </div>
         </section>
 
-
-        <!-- ===========================================
-             SPELLS & ABILITIES
-        ============================================ -->
-        <section
-          class="wiki-panel wiki-section"
-          id="spells"
-        >
-          <h2>✦ Spells & Abilities</h2>
-
-          <ul class="wiki-bullets">
-            {
-              trust.spells.map((item) => (
-                <li>{item}</li>
-              ))
-            }
-          </ul>
-        </section>
 
         <!-- ===========================================
              EQUIPMENT
