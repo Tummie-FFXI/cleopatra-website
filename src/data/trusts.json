@@ -38,7 +38,7 @@
       },
       {
         "title": "Weaponskills",
-        "description": "By default, Curilla has Warrior as her subjob which cannot be changed, therefore she is ineligible for the support job quest",
+        "description": "By default, Curilla will use the top two weaponskills in her skill list, so that by level 65, she only uses Swift and Vorpal Blade.",
         "list": [
           "Red Lotus Blade",
           "Seraph Blade",
