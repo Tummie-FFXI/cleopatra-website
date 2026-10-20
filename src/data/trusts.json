@@ -17,13 +17,35 @@
         "description": "Curilla primarily focuses on healing herself to help gain enmity"
       },
       {
-        "title": "Combat Positioning",
-        "description": "Curilla is a front line tank and will run to the engaged enemy"
+        "title": "Spells",
+        "description": "Curilla posessed most retail spells",
+        "list": [
+          "Cure I-IV",
+          "Protect I-IV",
+          "Shell I-III",
+          "Reprisal"
+        ]
       },
       {
-        "title": "Support Job",
-        "description": "By default, Curilla has Warrior as her subjob which cannot be changed, therefore she is ineligible for the support job quest"
-      }
+        "title": "Job Abilities",
+        "description": "By default, Curilla has Warrior as her subjob which cannot be changed, therefore she is ineligible for the support job quest",
+        "list": [
+          "Provoke",
+          "Defender",
+          "Sentinel",
+          "Rampart"
+        ]
+      },
+      {
+        "title": "Weaponskills",
+        "description": "By default, Curilla has Warrior as her subjob which cannot be changed, therefore she is ineligible for the support job quest",
+        "list": [
+          "Red Lotus Blade",
+          "Seraph Blade",
+          "Vorpal Blade",
+          "Swift Blade"
+        ]
+      }      
     ],
     "profiles": [
       {
