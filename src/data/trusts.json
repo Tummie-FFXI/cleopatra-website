@@ -72,7 +72,8 @@
     "summary": "A Dragoon Melee that is profecient with the polearm weapon",
     "portrait": "/images/wiki/trusts/trust_excenmille.jpg",
     "subjobs": [
-      "WAR"
+      "WAR",
+      "SAM"
     ],
     "overview": "Excenmille has been chanegd from retail from PLD to DRG.  Excenmille currently does not support a wyvern and will fight without a pet",
     "behaviors": [
@@ -104,15 +105,6 @@
           "Wheeling Thrust"
         ]
       }      
-    ],
-    "profiles": [
-      {
-        "name": "Default",
-        "routine": 75,
-        "emergency": 25,
-        "position": "Backline",
-        "utsusemi": "No"
-      }
     ],
     "equipment": [
       "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
