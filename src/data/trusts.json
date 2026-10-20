@@ -56,15 +56,6 @@
         "utsusemi": "No"
       }
     ],
-    "spells": [
-      "Cure I-V",
-      "Provoke",
-      "Defender",
-      "Sentinel",
-      "Rampart",
-      "Reprisal",
-      "Flash"
-    ],
     "equipment": [
       "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
     ],
@@ -72,6 +63,64 @@
       "Kupipi uses Cleopatra Custom AI v6.1"
     ]
   },  
+  {
+    "slug": "excenmille",
+    "name": "Excenmille",
+    "job": "Dragoon",
+    "jobShort": "DRG",
+    "role": "Melee",
+    "summary": "A Dragoon Melee that is profecient with the polearm weapon",
+    "portrait": "/images/wiki/trusts/trust_excenmille.jpg",
+    "subjobs": [
+      "WAR"
+    ],
+    "overview": "Excenmille has been chanegd from retail from PLD to DRG.  Excenmille currently does not support a wyvern and will fight without a pet",
+    "behaviors": [
+      {
+        "title": "Melee Priorities",
+        "description": "Excenmille focuses on melee damage"
+      },
+      {
+        "title": "Job Abilities",
+        "description": "By default, Excenmille has Dragoon as the subjob, but this can be changed to WAR or SAM via a quest",
+        "list": [
+          "Jump",
+          "High Jump",
+          "Super Jump - When taking hate",
+          "Meditate - Samurai sub only",
+          "Hasso - Samraui sub only",
+          "Seigan - Samurai sub only",
+          "Third Eye - Samraui sub only"
+        ]
+      },
+      {
+        "title": "Weaponskills",
+        "description": "By default, Excenmille will use the top two weaponskills in his skill list, so that by level 65, he only uses Wheeling Trust and Penta Thrust.",
+        "list": [
+          "Thunder Trust",
+          "Raiden Thrust",
+          "Leg Sweep",
+          "Penta Thrust",
+          "Wheeling Thrust"
+        ]
+      }      
+    ],
+    "profiles": [
+      {
+        "name": "Default",
+        "routine": 75,
+        "emergency": 25,
+        "position": "Backline",
+        "utsusemi": "No"
+      }
+    ],
+    "equipment": [
+      "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
+    ],
+    "notes": [
+      "Kupipi uses Cleopatra Custom AI v6.1"
+    ]
+  }, 
   {
     "slug": "kupipi",
     "name": "Kupipi",
