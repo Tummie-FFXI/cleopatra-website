@@ -235,7 +235,7 @@ const { trust } = Astro.props;
 
               <div>
                 <small>Support Jobs</small>
-                <strong>{trust.subjobs.join(' · ')}</strong>
+                <strong>{(trust.subjobs ?? []).join(' · ')}</strong>
               </div>
 
             </div>
@@ -283,7 +283,7 @@ const { trust } = Astro.props;
           <!-- SUPPORT JOB CARDS -->
           <div class="wiki-subjob-grid">
             {
-              trust.subjobs.map((job) => (
+              (trust.subjobs ?? []).map((job) => (
                 <div class="wiki-subjob">
                   <strong>{job}</strong>
 
@@ -305,7 +305,7 @@ const { trust } = Astro.props;
 
           <!-- SUPPORT JOB BEHAVIOR TABLE -->
           {
-            trust.profiles.length > 0 && (
+            (trust.profiles ?? []).length > 0 && (
               <div class="wiki-table-wrap">
                 <table class="wiki-table">
 
@@ -320,7 +320,7 @@ const { trust } = Astro.props;
                   </thead>
 
                   <tbody>
-                    {trust.profiles.map((p) => (
+                    {(trust.profiles ?? []).map((p) => (
                       <tr>
                         <td>{p.name}</td>
 
@@ -367,7 +367,7 @@ const { trust } = Astro.props;
         
           <div class="wiki-ai-list">
             {
-              trust.behaviors.map((behavior, i) => (
+              (trust.behaviors ?? []).map((behavior, i) => (
                 <details
                   class="wiki-ai-decision"
                   open={i === 0}
@@ -387,7 +387,7 @@ const { trust } = Astro.props;
                       <p>{behavior.description}</p>
                     )}
                   
-                    {behavior.list && behavior.list.length > 0 && (
+                    {Array.isArray(behavior.list) && behavior.list.length > 0 && (
                       <ul class="wiki-ai-bullets">
                         {behavior.list.map((item) => (
                           <li>{item}</li>
@@ -413,7 +413,7 @@ const { trust } = Astro.props;
 
           <ul class="wiki-bullets">
             {
-              trust.equipment.map((item) => (
+              (trust.equipment ?? []).map((item) => (
                 <li>{item}</li>
               ))
             }
@@ -431,7 +431,7 @@ const { trust } = Astro.props;
 
           <ul class="wiki-bullets">
             {
-              trust.notes.map((item) => (
+              (trust.notes ?? []).map((item) => (
                 <li>{item}</li>
               ))
             }
@@ -463,10 +463,10 @@ const { trust } = Astro.props;
     ====================================================== -->
     <script>
       const t =
-        document.querySelector<HTMLButtonElement>('.menu-toggle');
+        document.querySelector('.menu-toggle');
 
       const n =
-        document.querySelector<HTMLElement>('.nav-links');
+        document.querySelector('.nav-links');
 
       t?.addEventListener('click', () => {
         const o = t.getAttribute('aria-expanded') !== 'true';
