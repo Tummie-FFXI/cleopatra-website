@@ -1,9 +1,80 @@
----
-import '../../../styles/global.css';
-import '../../../styles/wiki.css';
-import trusts from '../../../data/trusts.json';
----
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Trust Compendium — Cleopatra XI Wiki</title></head><body>
-<header class="site-header"><div class="nav-wrap"><a href="/" class="wordmark"><img src="/images/cleopatra-logo.png" alt="Cleopatra XI" class="nav-logo"/></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button><nav id="main-nav" class="nav-links"><a href="/">Home</a><a href="/#news">News</a><a href="/features/">Features</a><a href="/custom-content/">Custom Content</a><a href="/#getting-started">Getting Started</a><a href="/wiki/" aria-current="page">Wiki</a><a href="/#community">Community</a><a class="nav-cta" href="/#getting-started">DOWNLOAD LAUNCHER ↗</a></nav></div></header>
-<section class="wiki-banner"><div class="container"><span class="wiki-kicker">CLEOPATRA XI WIKI</span><h1>Trust <em>Compendium</em></h1><p>Meet your companions and explore their customized AI decisions.</p></div></section>
-<div class="container wiki-shell"><aside class="wiki-sidebar"><div class="wiki-sidebar-heading">WIKI NAVIGATION</div><a class="wiki-side-link" href="/wiki/">Overview</a><div class="wiki-side-heading">TRUSTS</div><a class="wiki-side-link active" href="/wiki/trusts/">Trust Compendium</a>{trusts.map(t=><a class="wiki-side-link sub" href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>)}<div class="wiki-side-heading">JOBS</div><span class="wiki-side-link muted">Job Changes · Coming soon</span><span class="wiki-side-link muted">Weapon Skills · Coming soon</span><div class="wiki-side-heading">EQUIPMENT</div><span class="wiki-side-link muted">Artifact Armor · Coming soon</span><div class="wiki-side-heading">CONTENT</div><span class="wiki-side-link muted">Feretory · Coming soon</span><span class="wiki-side-link muted">Paragon · Coming soon</span></aside><main class="wiki-main"><div class="wiki-breadcrumb"><a href="/">Home</a> › <a href="/wiki/">Wiki</a> › Trusts</div><div class="wiki-panel wiki-intro"><span class="wiki-kicker">TRUST DIRECTORY</span><h2>Choose a Companion</h2><p>Explore each Trust's role, support-job options, and individual AI decision rules.</p><label class="wiki-search"><span class="sr-only">Search Trusts</span><input id="trust-search" type="search" placeholder="Search by name, role, or job…"/></label></div><div class="wiki-trust-grid" id="trust-grid">{trusts.map(t=><a class="wiki-trust-card" href={`/wiki/trusts/${t.slug}/`} data-search={`${t.name} ${t.job} ${t.role}`.toLowerCase()}><div class="wiki-trust-portrait"><img src={t.portrait} alt="" loading="lazy" onerror="this.style.display='none'"/><span class="wiki-placeholder">PORTRAIT</span></div><div><h3>{t.name}</h3><p>{t.job} · {t.role}</p><small>{t.summary}</small><strong>VIEW AI BEHAVIOR →</strong></div></a>)}</div><p id="trust-empty" hidden>No Trusts match that search.</p></main></div><footer class="footer"><div class="container legal">Cleopatra XI is an independent fan project and is not affiliated with or endorsed by Square Enix.</div></footer><script>const t=document.querySelector<HTMLButtonElement>('.menu-toggle');const n=document.querySelector<HTMLElement>('.nav-links');t?.addEventListener('click',()=>{const o=t.getAttribute('aria-expanded')!=='true';t.setAttribute('aria-expanded',String(o));n?.classList.toggle('open',o)});n?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t?.setAttribute('aria-expanded','false')}));const s=document.querySelector<HTMLInputElement>('#trust-search');s?.addEventListener('input',()=>{let count=0;document.querySelectorAll<HTMLElement>('.wiki-trust-card').forEach(c=>{const ok=(c.dataset.search||'').includes(s.value.trim().toLowerCase());c.hidden=!ok;if(ok)count++});const e=document.querySelector<HTMLElement>('#trust-empty');if(e)e.hidden=count!==0});</script></body></html>
+--- import '../../../styles/global.css'; import '../../../styles/wiki.css'; import trusts from '../../../data/trusts.json'; ---
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Trust Compendium — Cleopatra XI Wiki</title>
+</head>
+
+<body>
+	<header class="site-header">
+		<div class="nav-wrap">
+			<a href="/" class="wordmark"><img src="/images/cleopatra-logo.png" alt="Cleopatra XI" class="nav-logo" /></a>
+			<button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+			<nav id="main-nav" class="nav-links"><a href="/">Home</a><a href="/#news">News</a><a href="/features/">Features</a><a href="/custom-content/">Custom Content</a><a href="/#getting-started">Getting Started</a><a href="/wiki/" aria-current="page">Wiki</a><a href="/#community">Community</a><a class="nav-cta" href="/#getting-started">DOWNLOAD LAUNCHER ↗</a></nav>
+		</div>
+	</header>
+	<section class="wiki-banner">
+		<div class="container"><span class="wiki-kicker">CLEOPATRA XI WIKI</span>
+			<h1>Trust <em>Compendium</em></h1>
+			<p>Meet your companions and explore their customized AI decisions.</p>
+		</div>
+	</section>
+	<div class="container wiki-shell">
+		<aside class="wiki-sidebar">
+			<div class="wiki-sidebar-heading">WIKI NAVIGATION</div><a class="wiki-side-link" href="/wiki/">Overview</a>
+			<div class="wiki-side-heading">TRUSTS</div><a class="wiki-side-link active" href="/wiki/trusts/">Trust Compendium</a>{trusts.map(t=><a class="wiki-side-link sub" href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>)}
+			<div class="wiki-side-heading">JOBS</div><span class="wiki-side-link muted">Job Changes · Coming soon</span><span class="wiki-side-link muted">Weapon Skills · Coming soon</span>
+			<div class="wiki-side-heading">EQUIPMENT</div><span class="wiki-side-link muted">Artifact Armor · Coming soon</span>
+			<div class="wiki-side-heading">CONTENT</div><span class="wiki-side-link muted">Feretory · Coming soon</span><span class="wiki-side-link muted">Paragon · Coming soon</span></aside>
+		<main class="wiki-main">
+			<div class="wiki-breadcrumb"><a href="/">Home</a> › <a href="/wiki/">Wiki</a> › Trusts</div>
+			<div class="wiki-panel wiki-intro"><span class="wiki-kicker">TRUST DIRECTORY</span>
+				<h2>Choose a Companion</h2>
+				<p>Explore each Trust's role, support-job options, and individual AI decision rules.</p>
+				<label class="wiki-search"><span class="sr-only">Search Trusts</span>
+					<input id="trust-search" type="search" placeholder="Search by name, role, or job…" />
+				</label>
+			</div>
+			<div class="wiki-trust-grid" id="trust-grid">{trusts.map(t=>
+				<a class="wiki-trust-card" href={`/wiki/trusts/${t.slug}/`} data-search={`${t.name} ${t.job} ${t.role}`.toLowerCase()}>
+					<div class="wiki-trust-portrait"><img src={t.portrait} alt="" loading="lazy" onerror="this.style.display='none'" /><span class="wiki-placeholder">PORTRAIT</span></div>
+					<div>
+						<h3>{t.name}</h3>
+						<p>{t.job} · {t.role}</p><small>{t.summary}</small><strong>VIEW AI BEHAVIOR →</strong></div>
+				</a>)}</div>
+			<p id="trust-empty" hidden>No Trusts match that search.</p>
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="container legal">Cleopatra XI is an independent fan project and is not affiliated with or endorsed by Square Enix.</div>
+	</footer>
+	<script>
+	const t = document.querySelector < HTMLButtonElement > ('.menu-toggle');
+	const n = document.querySelector < HTMLElement > ('.nav-links');
+	t ? .addEventListener('click', () => {
+		const o = t.getAttribute('aria-expanded') !== 'true';
+		t.setAttribute('aria-expanded', String(o));
+		n ? .classList.toggle('open', o)
+	});
+	n ? .querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+		n.classList.remove('open');
+		t ? .setAttribute('aria-expanded', 'false')
+	}));
+	const s = document.querySelector < HTMLInputElement > ('#trust-search');
+	s ? .addEventListener('input', () => {
+		let count = 0;
+		document.querySelectorAll < HTMLElement > ('.wiki-trust-card').forEach(c => {
+			const ok = (c.dataset.search || '').includes(s.value.trim().toLowerCase());
+			c.hidden = !ok;
+			if(ok) count++
+		});
+		const e = document.querySelector < HTMLElement > ('#trust-empty');
+		if(e) e.hidden = count !== 0
+	});
+	</script>
+</body>
+
+</html>
