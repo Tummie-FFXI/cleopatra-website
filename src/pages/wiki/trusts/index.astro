@@ -30,7 +30,7 @@ import trusts from '../../../data/trusts.json';
 	<div class="container wiki-shell">
 		<aside class="wiki-sidebar">
 			<div class="wiki-sidebar-heading">WIKI NAVIGATION</div><a class="wiki-side-link" href="/wiki/">Overview</a>
-			<div class="wiki-side-heading">TRUSTS</div><a class="wiki-side-link active" href="/wiki/trusts/">Trust Compendium</a>{trusts.map(t=><a class="wiki-side-link sub" href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>)}
+			<div class="wiki-side-heading">TRUSTS</div><a class="wiki-side-link" ahref="/wiki/trust-system/">The Cleopatra Trust System</a><a class="wiki-side-link active" href="/wiki/trusts/" aria-current="page">Trust Compendium</a>{trusts.map(t=><a class="wiki-side-link sub" href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>)}
 			<div class="wiki-side-heading">JOBS</div><span class="wiki-side-link muted">Job Changes · Coming soon</span><span class="wiki-side-link muted">Weapon Skills · Coming soon</span>
 			<div class="wiki-side-heading">EQUIPMENT</div><span class="wiki-side-link muted">Artifact Armor · Coming soon</span>
 			<div class="wiki-side-heading">CONTENT</div><span class="wiki-side-link muted">Feretory · Coming soon</span><span class="wiki-side-link muted">Paragon · Coming soon</span></aside>
