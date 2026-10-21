@@ -1,0 +1,196 @@
+---
+import '../../styles/global.css';
+import '../../styles/wiki.css';
+import trusts from '../../data/trusts.json';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Cleopatra Trust System — Cleopatra XI Wiki</title>
+    <meta name="description" content="Discover how Cleopatra XI reimagines Trust companions with customized AI, support jobs, combat roles, and progression." />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a href="/" class="wordmark"><img src="/images/cleopatra-logo.png" alt="Cleopatra XI" class="nav-logo" /></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav" class="nav-links">
+          <a href="/">Home</a>
+          <a href="/#news">News</a>
+          <a href="/features/">Features</a>
+          <a href="/custom-content/">Custom Content</a>
+          <a href="/#getting-started">Getting Started</a>
+          <a href="/wiki/" aria-current="page">Wiki</a>
+          <a href="/#community">Community</a>
+          <a class="nav-cta" href="/#getting-started">DOWNLOAD LAUNCHER ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="wiki-banner">
+      <div class="container">
+        <span class="wiki-kicker">CLEOPATRA XI WIKI · TRUSTS</span>
+        <h1>The Cleopatra <em>Trust System</em></h1>
+        <p>Your companions. Reimagined.</p>
+      </div>
+    </section>
+
+    <div class="container wiki-shell">
+      <aside class="wiki-sidebar">
+        <div class="wiki-sidebar-heading">WIKI NAVIGATION</div>
+        <a class="wiki-side-link" href="/wiki/">Overview</a>
+
+        <div class="wiki-side-heading">TRUSTS</div>
+        <a class="wiki-side-link active" href="/wiki/trust-system/" aria-current="page">The Cleopatra Trust System</a>
+        <a class="wiki-side-link" href="/wiki/trusts/">Trust Compendium</a>
+        {trusts.map((t) => (
+          <a class="wiki-side-link sub" href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>
+        ))}
+
+        <div class="wiki-side-heading">JOBS</div>
+        <span class="wiki-side-link muted">Job Changes · Coming soon</span>
+        <span class="wiki-side-link muted">Abilities · Coming soon</span>
+        <span class="wiki-side-link muted">Weapon Skills · Coming soon</span>
+
+        <div class="wiki-side-heading">EQUIPMENT</div>
+        <span class="wiki-side-link muted">Artifact Armor · Coming soon</span>
+        <span class="wiki-side-link muted">Custom Equipment · Coming soon</span>
+
+        <div class="wiki-side-heading">CONTENT</div>
+        <span class="wiki-side-link muted">Endgame · Coming soon</span>
+        <span class="wiki-side-link muted">Feretory · Coming soon</span>
+
+        <div class="wiki-side-heading">SYSTEMS</div>
+        <span class="wiki-side-link muted">Quality of Life · Coming soon</span>
+      </aside>
+
+      <main class="wiki-main">
+        <div class="wiki-breadcrumb">
+          <a href="/">Home</a> › <a href="/wiki/">Wiki</a> › The Cleopatra Trust System
+        </div>
+
+        <section class="wiki-panel wiki-intro" id="introduction">
+          <span class="wiki-kicker">A NEW APPROACH TO COMPANIONS</span>
+          <h2>More Than Familiar Faces</h2>
+          <p>
+            Trusts in Cleopatra XI are designed to be more than companions who simply follow you into battle.
+            Our customized Trust system expands how companions make combat decisions, respond to their party,
+            and adapt to different roles. The goal is to make each Trust a meaningful choice in your adventuring party.
+          </p>
+          <p>
+            Each companion has its own behavior profile. Some systems are available now, while others are being
+            expanded as Cleopatra XI develops.
+          </p>
+        </section>
+
+        <nav class="wiki-tabs" aria-label="Trust system sections">
+          <a href="#combat-ai">Combat AI</a>
+          <a href="#support-jobs">Support Jobs</a>
+          <a href="#roles">Combat Roles</a>
+          <a href="#progression">Progression</a>
+          <a href="#companions">Companions</a>
+        </nav>
+
+        <section class="wiki-panel wiki-section" id="combat-ai">
+          <h2>⚙ Customized Combat AI</h2>
+          <p>
+            Cleopatra XI expands Trust decision-making through custom behavior rules. A companion's priorities
+            can account for factors such as party health, positioning, available abilities, and combat conditions.
+          </p>
+          <ul class="wiki-bullets">
+            <li><strong>Healing priorities:</strong> Healers can distinguish between routine healing and emergencies.</li>
+            <li><strong>Ability decisions:</strong> Job abilities can be used according to each Trust's combat role.</li>
+            <li><strong>Weapon skill selection:</strong> Custom selection modes can create more variety in combat.</li>
+            <li><strong>Individual behavior:</strong> Trusts do not all need to share the same decision rules.</li>
+          </ul>
+        </section>
+
+        <section class="wiki-panel wiki-section" id="support-jobs">
+          <h2>♟ Unlockable Support Jobs</h2>
+          <p>
+            Cleopatra XI's Trust support-job system is designed to let you customize certain companions.
+            Support jobs are more than a label: they can affect how a Trust fights, heals, and positions itself.
+          </p>
+          <p>
+            Planned support-job choices include Red Mage (RDM), Warrior (WAR), Samurai (SAM), and Ninja (NIN),
+            with availability and effects determined for each Trust individually.
+          </p>
+          <ul class="wiki-bullets">
+            <li><strong>RDM:</strong> Can emphasize a support-oriented spellcasting profile.</li>
+            <li><strong>WAR:</strong> Can support a more aggressive frontline role.</li>
+            <li><strong>SAM:</strong> Can support a weapon-skill-focused combat profile.</li>
+            <li><strong>NIN:</strong> Can enable frontline behavior and shadow-based defenses where configured.</li>
+          </ul>
+          <p>Not every support job or behavior is available to every Trust. Consult each companion's profile for its specific options.</p>
+        </section>
+
+        <section class="wiki-panel wiki-section" id="roles">
+          <h2>◈ Adaptive Combat Roles</h2>
+          <p>
+            A Trust's place in battle can change depending on its configuration. For example, a healer configured
+            for frontline combat may move closer to the enemy and use different healing priorities than a
+            backline-focused version of the same companion.
+          </p>
+          <p>
+            Our longer-term AI design also includes more situational behavior for support companions, such as
+            responding to the songs or abilities they need to use. These behaviors are developed on a Trust-by-Trust basis.
+          </p>
+        </section>
+
+        <section class="wiki-panel wiki-section" id="progression">
+          <h2>✦ Trust Progression & Unlocks</h2>
+          <p>
+            Trust customization is tied to Cleopatra XI's broader progression systems. The Feretory is planned
+            as a source of permanent Trust-related unlocks, including support-job options and expansions to
+            the Trust system.
+          </p>
+          <p>
+            This approach gives adventurers additional goals beyond simply obtaining a companion. Unlock
+            requirements, costs, and availability will be documented as the system is finalized.
+          </p>
+        </section>
+
+        <section class="wiki-panel wiki-section" id="companions">
+          <h2>◉ Every Companion Has a Role</h2>
+          <p>
+            Trusts are not intended to be interchangeable. Each companion's profile can describe its role,
+            available support jobs, equipment, combat priorities, spells, job abilities, and weapon skills.
+          </p>
+          <p>
+            Visit the Trust Compendium to explore individual companions and learn how they fit into your party.
+          </p>
+          <div class="wiki-bottom">
+            <a class="wiki-button" href="/wiki/trusts/">EXPLORE THE TRUST COMPENDIUM →</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="container legal">
+        Cleopatra XI is an independent fan project and is not affiliated with or endorsed by Square Enix.
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav-links');
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        nav?.classList.toggle('open', isOpen);
+      });
+
+      nav?.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle?.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
+  </body>
+</html>
