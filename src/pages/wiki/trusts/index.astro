@@ -30,7 +30,7 @@ import trusts from '../../../data/trusts.json';
 	<div class="container wiki-shell">
 		<aside class="wiki-sidebar">
 			<div class="wiki-sidebar-heading">WIKI NAVIGATION</div><a class="wiki-side-link" href="/wiki/">Overview</a>
-			<div class="wiki-side-heading">TRUSTS</div><a class="wiki-side-link" ahref="/wiki/trust-system/">The Cleopatra Trust System</a><a class="wiki-side-link active" href="/wiki/trusts/" aria-current="page">Trust Compendium</a>{trusts.map(t=><a class="wiki-side-link sub" href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>)}
+			<div class="wiki-side-heading">TRUSTS</div><a class="wiki-side-link" href="/wiki/trust-system/">The Cleopatra Trust System</a><a class="wiki-side-link active" href="/wiki/trusts/" aria-current="page">Trust Compendium</a>{trusts.map(t=><a class="wiki-side-link sub" href={`/wiki/trusts/${t.slug}/`}>{t.name}</a>)}
 			<div class="wiki-side-heading">JOBS</div><span class="wiki-side-link muted">Job Changes · Coming soon</span><span class="wiki-side-link muted">Weapon Skills · Coming soon</span>
 			<div class="wiki-side-heading">EQUIPMENT</div><span class="wiki-side-link muted">Artifact Armor · Coming soon</span>
 			<div class="wiki-side-heading">CONTENT</div><span class="wiki-side-link muted">Feretory · Coming soon</span><span class="wiki-side-link muted">Paragon · Coming soon</span></aside>
@@ -56,29 +56,45 @@ import trusts from '../../../data/trusts.json';
 	<footer class="footer">
 		<div class="container legal">Cleopatra XI is an independent fan project and is not affiliated with or endorsed by Square Enix.</div>
 	</footer>
+
 	<script>
-	const t = document.querySelector < HTMLButtonElement > ('.menu-toggle');
-	const n = document.querySelector < HTMLElement > ('.nav-links');
-	t ? .addEventListener('click', () => {
-		const o = t.getAttribute('aria-expanded') !== 'true';
-		t.setAttribute('aria-expanded', String(o));
-		n ? .classList.toggle('open', o)
-	});
-	n ? .querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-		n.classList.remove('open');
-		t ? .setAttribute('aria-expanded', 'false')
-	}));
-	const s = document.querySelector < HTMLInputElement > ('#trust-search');
-	s ? .addEventListener('input', () => {
-		let count = 0;
-		document.querySelectorAll < HTMLElement > ('.wiki-trust-card').forEach(c => {
-			const ok = (c.dataset.search || '').includes(s.value.trim().toLowerCase());
-			c.hidden = !ok;
-			if(ok) count++
-		});
-		const e = document.querySelector < HTMLElement > ('#trust-empty');
-		if(e) e.hidden = count !== 0
-	});
+	  const t = document.querySelector('.menu-toggle');
+	  const n = document.querySelector('.nav-links');
+	
+	  t?.addEventListener('click', () => {
+	    const o = t.getAttribute('aria-expanded') !== 'true';
+	
+	    t.setAttribute('aria-expanded', String(o));
+	    n?.classList.toggle('open', o);
+	  });
+	
+	  n?.querySelectorAll('a').forEach((a) => {
+	    a.addEventListener('click', () => {
+	      n.classList.remove('open');
+	      t?.setAttribute('aria-expanded', 'false');
+	    });
+	  });
+	
+	  const s = document.querySelector('#trust-search');
+	
+	  s?.addEventListener('input', () => {
+	    let count = 0;
+	
+	    document.querySelectorAll('.wiki-trust-card').forEach((c) => {
+	      const ok = (c.dataset.search || '')
+	        .includes(s.value.trim().toLowerCase());
+	
+	      c.hidden = !ok;
+	
+	      if (ok) count++;
+	    });
+	
+	    const e = document.querySelector('#trust-empty');
+	
+	    if (e) {
+	      e.hidden = count !== 0;
+	    }
+	  });
 	</script>
 </body>
 
