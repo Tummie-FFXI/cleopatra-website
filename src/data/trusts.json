@@ -110,7 +110,7 @@
       "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
     ],
     "notes": [
-      "Kupipi uses Cleopatra Custom AI v6.1"
+      "Excenmille uses Cleopatra Custom AI v6.1"
     ]
   }, 
   {
@@ -185,5 +185,63 @@
     "notes": [
       "Kupipi uses Cleopatra Custom AI v6.1"
     ]
-  }
+  },
+  {
+    "slug": "semi",
+    "name": "Semih Lafinah",
+    "job": "Ranger",
+    "jobShort": "RNG",
+    "role": "Melee",
+    "summary": "A Ranger profecient with archery as her weapon",
+    "portrait": "/images/wiki/trusts/trust_semi.jpg",
+    "subjobs": [
+      "WAR",
+      "SAM"
+    ],
+    "overview": "Semih Lafinahis one of three Ranger Trusts, and her combat behavior is extremely aggressive ",
+    "behaviors": [
+      {
+        "title": "Melee Priorities",
+        "description": "Semih Lafinah focuses on melee damage"
+      },
+      {
+        "title": "Job Abilities",
+        "description": "By default, Semih Lafinah has Ranger as the subjob, but this can be changed to WAR, SAM, or NIN via a quest",
+        "list": [
+          "Sharpshot",
+          "Barrage",
+          "Meditate - Samurai sub only",
+          "Hasso - Samraui sub only",
+          "Seigan - Samurai sub only",
+          "Third Eye - Samraui sub only"
+        ]
+      },
+      {
+        "title": "Weaponskills",
+        "description": "By default, Semih Lafinah will use the top three weaponskills in her skill list.",
+        "list": [
+          "Flamming Arrow",
+          "Piercing Arrow",
+          "Sidewinder",
+          "Stellar Arrow",
+          "Lux Arrow"
+        ]
+      }      
+    ],
+      {
+        "title": "Magic",
+        "description": "Semih Lafinah gains Ninjitsu Magic when choosing Ninja as her subjob",
+        "list": [
+          "Utsusemi: Ichi - Ninja Subjob only",
+          "Utsusemi: Ni - Ninja Subjob only"
+        ]
+      }      
+    ],    
+    "equipment": [
+      "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
+    ],
+    "notes": [
+      "Semih Lafinah uses Cleopatra Custom AI v6.1"
+    ]
+  }  
 ]
