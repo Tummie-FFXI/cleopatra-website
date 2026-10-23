@@ -62,6 +62,63 @@
     "notes": [
       "Kupipi uses Cleopatra Custom AI v6.1"
     ]
+  },
+  {
+    "slug": "elivira",
+    "name": "Elivira",
+    "job": "Ranger",
+    "jobShort": "RNG",
+    "role": "Melee",
+    "summary": "A Ranger profecient with marksmanship as her weapon",
+    "portrait": "/images/wiki/trusts/trust_elivira.jpg",
+    "subjobs": [
+      "WAR",
+      "SAM",
+      "NIN"
+    ],
+    "overview": "Elivira is one of three Ranger Trusts, and her combat behavior is more restrained",
+    "behaviors": [
+      {
+        "title": "Melee Priorities",
+        "description": "Elivira is a patient, methodical marksman who favors precision over aggression. Rather than attacking relentlessly, she carefully chooses her moments to strike delivering powerful, well-timed shots while being aware of her enmity generation."
+      },
+      {
+        "title": "Job Abilities",
+        "description": "By default, Elivira has Ranger as the subjob, but this can be changed to WAR, SAM, or NIN via a quest",
+        "list": [
+          "Sharpshot",
+          "Barrage",
+          "Meditate - Samurai sub only",
+          "Hasso - Samraui sub only",
+          "Seigan - Samurai sub only",
+          "Third Eye - Samraui sub only"
+        ]
+      },
+      {
+        "title": "Weaponskills",
+        "description": "By default, Elivira will use the top three weaponskills in her skill list.",
+        "list": [
+          "Hot Shot",
+          "Split Shot",
+          "Slug Shot",
+          "Coronach - WS only, no Aftermath"
+        ]
+      },      
+      {
+        "title": "Magic",
+        "description": "Elivira gains Ninjitsu Magic when choosing Ninja as her subjob",
+        "list": [
+          "Utsusemi: Ichi - Ninja Subjob only",
+          "Utsusemi: Ni - Ninja Subjob only"
+        ]
+      }      
+    ],    
+    "equipment": [
+      "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
+    ],
+    "notes": [
+      "Elivira uses Cleopatra Custom AI v6.1"
+    ]
   },  
   {
     "slug": "excenmille",
@@ -187,7 +244,7 @@
     ]
   },
   {
-    "slug": "semi",
+    "slug": "semih_lafinah",
     "name": "Semih Lafinah",
     "job": "Ranger",
     "jobShort": "RNG",
