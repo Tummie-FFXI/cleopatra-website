@@ -1,5 +1,5 @@
 ---
-title: "Development Spotlight: The Feretory"
+title: "Development Spotlight: Feretory"
 date: 2026-11-03
 category: Development
 summary: "Explore Cleopatra XI's Feretory: earn Infamy, unlock Trust customization, lasting character rewards, and gain an alternative route to Sky and Sea."
