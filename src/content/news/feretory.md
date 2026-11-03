@@ -38,10 +38,10 @@ One of the Feretory's biggest roles is expanding what players can do with Cleopa
 Planned reward categories include:
 
 - **Fellowship** — A foundational Trust-related unlock.
-- **Warrior's Tome** — Unlocks Warrior support-job customization.
-- **Red Mage's Tome** — Unlocks Red Mage support-job customization.
-- **Samurai's Tome** — Unlocks Samurai support-job customization.
-- **Ninja's Tome** — Unlocks Ninja support-job customization.
+- **Warrior's Tome** — Unlocks Warrior subjob customization.
+- **Red Mage's Tome** — Unlocks Red Mage subjob customization.
+- **Samurai's Tome** — Unlocks Samurai subjob customization.
+- **Ninja's Tome** — Unlocks Ninja subjob customization.
 - **Trust Expansion I and II** — Increase the number of Trust companions you can summon.
 - **Mastery** — Unlocks access to advanced Trust ciphers.
 
