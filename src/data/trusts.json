@@ -70,7 +70,7 @@
     "jobShort": "RNG",
     "role": "Melee",
     "summary": "A Ranger profecient with marksmanship as her weapon",
-    "portrait": "/images/wiki/trusts/trust_elivira.jpg",
+    "portrait": "/images/wiki/trusts/trust_elivira.png",
     "subjobs": [
       "WAR",
       "SAM",
@@ -127,7 +127,7 @@
     "jobShort": "DRG",
     "role": "Melee",
     "summary": "A Dragoon Melee that is profecient with the polearm weapon",
-    "portrait": "/images/wiki/trusts/trust_excenmille.jpg",
+    "portrait": "/images/wiki/trusts/trust_excenmille.png",
     "subjobs": [
       "WAR",
       "SAM"
@@ -250,7 +250,7 @@
     "jobShort": "RNG",
     "role": "Melee",
     "summary": "A Ranger profecient with archery as her weapon",
-    "portrait": "/images/wiki/trusts/trust_semi.jpg",
+    "portrait": "/images/wiki/trusts/trust_semi_lafinah.png",
     "subjobs": [
       "WAR",
       "SAM",
