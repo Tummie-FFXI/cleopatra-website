@@ -79,7 +79,7 @@
     "behaviors": [
       {
         "title": "Spells",
-        "description": "Uses up to 4 different spells based on level at a time.  Spell selection is random and is on a 15 second recast timer.  Darrcuiln is able to self buff with Refueling(Haste) along with healing himself wtih Wild Carrot/Magic Fruit and other party members with Magic Fruit"
+        "description": "Uses up to 4 different spells based on level at a time.  Spell selection is random and is on a 15 second recast timer.  Darrcuiln is able to self buff with Refueling(Haste) along with healing himself wtih Wild Carrot/Magic Fruit and other party members with Magic Fruit",
         "list": [
           "Foot Kick",
           "Sprout Smack",
