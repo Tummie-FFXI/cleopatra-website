@@ -90,29 +90,6 @@
         "description": "By default, Darrcuiln has BLU set to his subjob, but when a specific quest is completed, players can choose between three different subjobs.\n\nWarrior - Darrcuiln will use berserk and become slightly more aggresive.\n\nNinja - Darrcuiln gains access to Utsusemi and adopts a more aggressive frontline role."
       }
     ],
-    "profiles": [
-      {
-        "name": "Default",
-        "routine": 75,
-        "emergency": 25,
-        "position": "Frontline",
-        "utsusemi": "No"
-      },
-      {
-        "name": "WAR",
-        "routine": 70,
-        "emergency": 25,
-        "position": "Frontline",
-        "utsusemi": "No"
-      },
-      {
-        "name": "NIN",
-        "routine": 70,
-        "emergency": 25,
-        "position": "Frontline",
-        "utsusemi": "Yes"
-      }
-    ],
     "spells": [
       "Foot Kick",
       "Sprout Smack",
@@ -131,6 +108,23 @@
       "Disseverment",
       "Utsusemi (when subjob is Ninja)"
     ],
+      {
+        "title": "Job Abilities",
+        "description": "Darrcuiln supports only one job ability at level 40",
+        "list": [
+          "Chain Affinity"
+        ]
+      },
+      {
+        "title": "Weaponskills",
+        "description": "By default, Darrcuiln will use Red Lotus Blade or Savage Blade (Lvl 70+) when doing Chain Affinity self skillchains.  When soloing weaponskills, he defaults to Red Lotus Blade or Vorpal Blade depending on level",
+        "list": [
+          "Red Lotus Blade",
+          "Vorpal Blade",
+          "Savage Blade"
+        ]
+      }      
+    ],    
     "equipment": [
       "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
     ],
