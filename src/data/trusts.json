@@ -70,7 +70,7 @@
     "jobShort": "BLU",
     "role": "Melee Caster",
     "summary": "A melee caster who utilizes monster skills to deal damage",
-    "portrait": "/images/wiki/trusts/trust_darrcuiln.jpg",
+    "portrait": "/images/wiki/trusts/trust_darrcuiln.png",
     "subjobs": [
       "WAR",
       "NIN"
