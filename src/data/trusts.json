@@ -60,9 +60,84 @@
       "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
     ],
     "notes": [
-      "Kupipi uses Cleopatra Custom AI v6.1"
+      "Curilla uses Cleopatra Custom AI v6.1"
     ]
   },
+  {
+    "slug": "darrcuiln",
+    "name": "Darrcuiln",
+    "job": "Blue Mage",
+    "jobShort": "BLU",
+    "role": "Melee Caster",
+    "summary": "A melee caster who utilizes monster skills to deal damage",
+    "portrait": "/images/wiki/trusts/trust_darrcuiln.jpg",
+    "subjobs": [
+      "WAR",
+      "NIN"
+    ],
+    "overview": "Darrcuiln has been changed from retail and is now a Blue Mage.  Darrcuiln can use up to 15 different BLU spells and use Chain Affinity + Weaponskill + Blue Spell to complete self skillchains",
+    "behaviors": [
+      {
+        "title": "Spell Priorities",
+        "description": "Uses up to 4 different spells based on level at a time.  Spell selection is random and is on a 15 second recast timer.  Darrcuiln is able to self buff with Refueling(Haste) along with healing himself wtih Wild Carrot/Magic Fruit and other party members with Magic Fruit"
+      },
+      {
+        "title": "Combat Positioning",
+        "description": "Darrcuiln will always remain at the melee combat position"
+      },
+      {
+        "title": "Support Job",
+        "description": "By default, Darrcuiln has BLU set to his subjob, but when a specific quest is completed, players can choose between three different subjobs.\n\nWarrior - Darrcuiln will use berserk and become slightly more aggresive.\n\nNinja - Darrcuiln gains access to Utsusemi and adopts a more aggressive frontline role."
+      }
+    ],
+    "profiles": [
+      {
+        "name": "Default",
+        "routine": 75,
+        "emergency": 25,
+        "position": "Frontline",
+        "utsusemi": "No"
+      },
+      {
+        "name": "WAR",
+        "routine": 70,
+        "emergency": 25,
+        "position": "Frontline",
+        "utsusemi": "No"
+      },
+      {
+        "name": "NIN",
+        "routine": 70,
+        "emergency": 25,
+        "position": "Frontline",
+        "utsusemi": "Yes"
+      }
+    ],
+    "spells": [
+      "Foot Kick",
+      "Sprout Smack",
+      "Power Attack",
+      "Healing Breeze",
+      "Feather Storm",
+      "Bludgeon",
+      "Screwdriver",
+      "Wild Carrot",
+      "Jet stream",
+      "Sickle SLash",
+      "Magic Fruit",
+      "Death Scissors",
+      "Frenetic Rip",
+      "Hysteric Barrage",
+      "Disseverment",
+      "Utsusemi (when subjob is Ninja)"
+    ],
+    "equipment": [
+      "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
+    ],
+    "notes": [
+      "Darrcuiln uses Cleopatra Custom AI v6.1"
+    ]
+  },  
   {
     "slug": "elivira",
     "name": "Elivira",
