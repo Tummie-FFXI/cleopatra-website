@@ -304,6 +304,60 @@
     ]
   },
   {
+    "slug": "nanaa_mihgo",
+    "name": "Nanaa Mihgo",
+    "job": "Thief",
+    "jobShort": "THF",
+    "role": "Melee",
+    "summary": "A Thief proficient with a dagger as her main weapon",
+    "portrait": "/images/wiki/trusts/trust_nanaa_mihgo.png",
+    "subjobs": [
+      "WAR",
+      "NIN"
+    ],
+    "overview": "Nanaa Mihgo is one of two Theif Trusts who utilizes Sneak Attack and Trick Attack to maximize damage. Trick Attack is used to add enmity to the tank, while Sneak Attack is often paired with a weaponskill for maximum damage",
+    "behaviors": [
+      {
+        "title": "Melee Priorities",
+        "description": "Nanaa Mihgo focuses on melee damage and planting hate on the tank with Trick Attack"
+      },
+      {
+        "title": "Job Abilities",
+        "description": "By default, Semih Lafinah has Ranger as the subjob, but this can be changed to WAR, SAM, or NIN via a quest",
+        "list": [
+          "Sneak Attack",
+          "Trick Attack",
+          "Berserk - Warrior sub only",
+        ]
+      },
+      {
+        "title": "Weaponskills",
+        "description": "By default, Nanaa Mihgo will use the top three weaponskills in her skill list, but will pair Sneak Attack with Viper Bite, Dancing Edge, Shark Bite, and King Cobra Clamp",
+        "list": [
+          "Wasp Sting",
+          "Viper Bite",
+          "Dancing Edge",
+          "Shark Bite",
+          "King Cobra Clamp"
+        ]
+      },      
+      {
+        "title": "Magic",
+        "description": "Semih Lafinah gains Ninjitsu Magic when choosing Ninja as her subjob",
+        "list": [
+          "Utsusemi: Ichi - Ninja Subjob only",
+          "Utsusemi: Ni - Ninja Subjob only"
+        ]
+      }      
+    ],    
+    "equipment": [
+      "Default Trust equipment \u2014 Future updates may allow players to customize the gear the Trust wears as a cosmetic change."
+    ],
+    "notes": [
+      "Nanaa Mihgo uses Cleopatra Custom AI v6.1"
+    ]
+  },   
+  {
     "slug": "semih_lafinah",
     "name": "Semih Lafinah",
     "job": "Ranger",
